@@ -346,6 +346,40 @@
             color: #d49b14;
         }
 
+        /* Map button */
+        .map-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            background: #0b6efd;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .map-link:hover {
+            background: #0956d1;
+            transform: translateY(-2px);
+        }
+
+        /* Small map preview container (optional) */
+        .map-preview {
+            margin-top: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+
+        .map-preview iframe {
+            width: 100%;
+            height: 260px;
+            border: 0;
+            display: block;
+        }
+
         /* ================= FOOTER ================= */
 
         footer {
@@ -425,7 +459,7 @@
 <header>
 
     <div class="logo">
-        نوروزی ترانسپورت
+        نوروزی ترانسپور
     </div>
 
     <nav>
@@ -457,13 +491,8 @@
 
         <div class="buttons">
 
-            <a class="btn btn-primary" href="#services">
-                مشاهده خدمات
-            </a>
-
-            <a class="btn btn-whatsapp" href="https://wa.me/93779615141" target="_blank">
-               0779615141 تماس در واتساپ
-            </a>
+            <a class="btn btn-primary" href="#services">مشاهده خدمات</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/93779615141" target="_blank">0779615141 تماس در واتساپ</a>
 
         </div>
 
@@ -479,18 +508,9 @@
     </div>
 
     <div class="about-content">
-        <p>
-            شرکت ترانسپورتی بین المللی نوروزی با ارائه خدمات
-            حمل و نقل داخلی و خارجی، آماده انتقال اموال تجارتی
-            شما به تمام نقاط کشور و مسیرهای بین المللی می‌باشد.
-        </p>
-
+        <p>شرکت ترانسپورتی بین المللی نوروزی با ارائه خدمات حمل و نقل داخلی و خارجی، آماده انتقال اموال تجارتی شما به تمام نقاط کشور و مسیرهای بین المللی می‌باشد.</p>
         <br>
-
-        <p>
-            دقت، سرعت و امنیت در انتقال کالا،
-            اساس فعالیت ماست.
-        </p>
+        <p>دقت، سرعت و امنیت در انتقال کالا، اساس فعالیت ماست.</p>
     </div>
 
 </section>
@@ -638,6 +658,15 @@
             <br>
 
             <p>شعبه کمیسیون: دکان نمبر ۱۸</p>
+
+            <!-- Google Maps link added here -->
+            <a class="map-link" href="https://maps.app.goo.gl/XY5fRtrkTeNLmcCS7" target="_blank" rel="noopener">📍 نمایش روی نقشه</a>
+
+            <!-- Optional small embedded preview using Google Maps embed (fallback to link if embed not available) -->
+            <div class="map-preview" aria-hidden="true">
+                <iframe src="https://www.google.com/maps?q=Herat%20Islam%20Qala&output=embed"></iframe>
+            </div>
+
         </div>
 
     </div>
