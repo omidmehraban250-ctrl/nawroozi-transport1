@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>شرکت ترانسپورتی بین المللی نوروزی</title>
+
+    <!-- فونت نستعلیق -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.9;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #071b35;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.25);
+        }
+
+        .logo {
+            font-family: "B Titr", "B Titr", Tahoma, sans-serif;
+            font-size: 26px;
+            font-weight: bold;
+            color: #f5b72f;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-family: "B Titr", Tahoma, sans-serif;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f5b72f;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 650px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(4,18,38,0.72),
+                    rgba(4,18,38,0.82)
+                ),
+                url("https://dispatch42.school/images/articles/1748615690428/articleImageMobile.jpeg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: "B Titr", Tahoma, sans-serif;
+            font-size: 50px;
+            color: #f5b72f;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-size: 34px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-size: 25px;
+            margin-bottom: 35px;
+        }
+
+        /* ================= BUTTONS ================= */
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: "B Titr", Tahoma, sans-serif;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #f5b72f;
+            color: #071b35;
+        }
+
+        .btn-primary:hover {
+            background: #ffd568;
+            transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            background: #20c76a;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #16a958;
+            transform: translateY(-3px);
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: #071b35;
+            font-family: "B Titr", Tahoma, sans-serif;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #f5b72f;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-size: 23px;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service {
+            background: white;
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+        }
+
+        .service-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            color: #071b35;
+            font-family: "B Titr", Tahoma, sans-serif;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-size: 19px;
+        }
+
+        /* ================= TRUCK GALLERY ================= */
+
+        .gallery {
+            background: #eef2f6;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .truck-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .truck-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .truck-card img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .truck-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .truck-info h3 {
+            font-family: "B Titr", Tahoma, sans-serif;
+            color: #071b35;
+            font-size: 22px;
+        }
+
+        .truck-info p {
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-size: 18px;
+        }
+
+        /* ================= NUMBERS ================= */
+
+        .numbers {
+            background: #071b35;
+            color: white;
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .number h3 {
+            color: #f5b72f;
+            font-family: Arial, sans-serif;
+            font-size: 42px;
+        }
+
+        .number p {
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-size: 19px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .contact-box {
+            background: #f5f7fa;
+            padding: 35px;
+            border-radius: 12px;
+        }
+
+        .contact-box h3 {
+            color: #071b35;
+            font-family: "B Titr", Tahoma, sans-serif;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            font-family: "Noto Nastaliq Urdu", serif;
+            font-size: 20px;
+        }
+
+        .phone {
+            display: block;
+            color: #071b35;
+            text-decoration: none;
+            font-size: 19px;
+            margin: 8px 0;
+            direction: ltr;
+            text-align: right;
+        }
+
+        .phone:hover {
+            color: #d49b14;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #041225;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer strong {
+            color: #f5b72f;
+            font-family: "B Titr", Tahoma, sans-serif;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 580px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero h2 {
+                font-size: 27px;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .numbers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        نوروزی ترانسپورت
+    </div>
+
+    <nav>
+
+        <a href="#home">خانه</a>
+
+        <a href="#about">درباره ما</a>
+
+        <a href="#services">خدمات</a>
+
+        <a href="#gallery">ناوگان ما</a>
+
+        <a href="#contact">تماس با ما</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            شرکت ترانسپورتی بین المللی نوروزی
+        </h1>
+
+        <h2>
+            دقت و سرعت در انتقال اموال تجارتی شما
+        </h2>
+
+        <p>
+            انتقال اموال تجارتی شما به تمام نقاط کشور
+            به طور صحیح و در اسرع وقت
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn btn-primary" href="#services">
+                مشاهده خدمات
+            </a>
+
+            <a
+                class="btn btn-whatsapp"
+                href="https://wa.me/93795190285"
+                target="_blank">
+
+               0791424508 تماس در واتساپ
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+
+        <h2>
+            درباره شرکت نوروزی
+        </h2>
+
+        <span></span>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <p>
+            شرکت ترانسپورتی بین المللی نوروزی با ارائه خدمات
+            حمل و نقل داخلی و خارجی، آماده انتقال اموال تجارتی
+            شما به تمام نقاط کشور و مسیرهای بین المللی می‌باشد.
+        </p>
+
+        <br>
+
+        <p>
+            دقت، سرعت و امنیت در انتقال کالا،
+            اساس فعالیت ماست.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+    <div class="section-title">
+
+        <h2>
+            خدمات ما
+        </h2>
+
+        <span></span>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🚛
+            </div>
+
+            <h3>
+                حمل و نقل داخلی
+            </h3>
+
+            <p>
+                انتقال اموال تجارتی به تمام نقاط افغانستان
+                با سرعت و امنیت بالا.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🌍
+            </div>
+
+            <h3>
+                ترانسپورت بین المللی
+            </h3>
+
+            <p>
+                ارائه خدمات حمل و نقل بین المللی
+                برای انتقال کالاهای تجارتی.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                📦
+            </div>
+
+            <h3>
+                انتقال کالا
+            </h3>
+
+            <p>
+                انتقال صحیح و سریع انواع کالاهای تجارتی
+                به مقصد مورد نظر.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                🚢
+            </div>
+
+            <h3>
+                خدمات حمل بار
+            </h3>
+
+            <p>
+                هماهنگی و انتقال بار با وسایل نقلیه مناسب
+                برای انواع محموله‌ها.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                ❄️
+            </div>
+
+            <h3>
+                حمل بار حساس
+            </h3>
+
+            <p>
+                انتقال کالاهایی که نیازمند مراقبت
+                و شرایط ویژه هستند.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                📋
+            </div>
+
+            <h3>
+                ترخیص کالا
+            </h3>
+
+            <p>
+                خدمات مربوط به ترخیص و هماهنگی
+                امور حمل و نقل کالا.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= TRUCK GALLERY ================= -->
+
+<section class="gallery" id="gallery">
+
+    <div class="section-title">
+
+        <h2>
+            ناوگان ترانسپورتی ما
+        </h2>
+
+        <span></span>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+        <!-- کامیون اول -->
+
+        <div class="truck-card">
+
+            <img
+                src="https://spotinc.com/wp-content/uploads/2025/03/shutterstock_2513257961-1-1536x1024.jpg"
+                alt="کامیون ترانسپورتی">
+
+            <div class="truck-info">
+
+                <h3>
+                    خدمات ترخیز کالای تجارتی شما
+                </h3>
+
+                <p>
+                    به طور 24 ساعته
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- کامیون دوم -->
+
+        <div class="truck-card">
+
+            <img
+                src="https://static.vecteezy.com/system/resources/thumbnails/036/208/440/small_2x/ai-generated-truck-delivering-freight-speeding-on-highway-carrying-heavy-cargo-generated-by-ai-photo.jpg"
+                alt="کامیون باربری">
+
+            <div class="truck-info">
+
+                <h3>
+                    حمل بار بین شهری
+                </h3>
+
+                <p>
+                    انتقال سریع و مطمئن محموله‌ها
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- کامیون سوم -->
+
+        <div class="truck-card">
+
+            <img
+                src="https://fatiguescience.com/hubfs/road%20transportation%20operations.jpeg"
+                alt="کامیون حمل و نقل">
+
+            <div class="truck-info">
+
+                <h3>
+                    انتقال اموال تجارتی شما به تمام نقاط کشور، ایران ، پاکستان، چین و غیره
+                </h3>
+
+                <p>
+                    خدمات سرتاسری داخلی و خارجی و ترخیز کالا
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= NUMBERS ================= -->
+
+<section class="numbers">
+
+    <div class="numbers-grid">
+
+
+        <div class="number">
+
+            <h3>
+                30+
+            </h3>
+
+            <p>
+                سال تجربه
+            </p>
+
+        </div>
+
+
+        <div class="number">
+
+            <h3>
+                1000000+
+            </h3>
+
+            <p>
+                محموله انتقال داده شده
+            </p>
+
+        </div>
+
+
+        <div class="number">
+
+            <h3>
+               +
+            </h3>
+
+            <p>
+                مسیر حمل و نقل
+            </p>
+
+        </div>
+
+
+        <div class="number">
+
+            <h3>
+                24/7
+            </h3>
+
+            <p>
+                پشتیبانی
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>
+            تماس با ما
+        </h2>
+
+        <span></span>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-box">
+
+            <h3>
+                شماره‌های تماس
+            </h3>
+
+
+            <a
+                class="phone"
+                href="tel:0795190285">
+
+                0795190285
+
+            </a>
+
+
+            <a
+                class="phone"
+                href="tel:0779615141">
+
+                0779615141
+
+            </a>
+
+
+            <a
+                class="phone"
+                href="tel:0794241052">
+
+                0794241052
+
+            </a>
+
+
+            <a
+                class="phone"
+                href="tel:0704861149">
+
+                0704861149
+
+            </a>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>
+                آدرس شرکت
+            </h3>
+
+            <p>
+                هرات، سرک عمومی اسلام‌قلعه،
+                مقابل ترمینال باربری،
+                کوچه سید مختار، دکان ۶
+            </p>
+
+            <br>
+
+            <p>
+                شعبه کمیسیون: دکان نمبر ۱۸
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026
+
+        <strong>
+            شرکت ترانسپورتی بین المللی نوروزی
+        </strong>
+
+        - تمامی حقوق محفوظ است.
+
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
