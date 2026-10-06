@@ -4,7 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#071b35">
+  <meta name="description" content="شرکت ترانسپورتی نوروزی خدمات حمل و نقل داخلی و بین‌المللی، باربری، ترخیص کالا و پشتیبانی 24/7. تماس: 0779615141">
+  <meta name="keywords" content="شرکت ترانسپورتی نوروزی, حمل و نقل, باربری, ترخیص کالا, نوروزی ترانسپورت, هرات, افغانستان">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://omidmehraban250-ctrl.github.io/nawroozi-transport1/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="شرکت ترانسپورتی بین‌المللی نوروزی">
+  <meta property="og:description" content="خدمات حمل و نقل داخلی و بین‌المللی، ترخیص کالا و پشتیبانی 24/7 با شرکت ترانسپورتی نوروزی">
+  <meta property="og:url" content="https://omidmehraban250-ctrl.github.io/nawroozi-transport1/">
+  <meta property="og:image" content="https://spotinc.com/wp-content/uploads/2025/03/shutterstock_2513257961-1-1536x1024.jpg">
+  <meta property="og:site_name" content="نوروزی ترانسپورت">
+  <meta property="og:locale" content="fa_IR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="شرکت ترانسپورتی بین‌المللی نوروزی">
+  <meta name="twitter:description" content="خدمات حمل و نقل داخلی و بین‌المللی، ترخیص کالا و پشتیبانی 24/7">
+  <meta name="twitter:image" content="https://spotinc.com/wp-content/uploads/2025/03/shutterstock_2513257961-1-1536x1024.jpg">
   <title>شرکت ترانسپورتی بین‌المللی نوروزی</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "شرکت ترانسپورتی بین‌المللی نوروزی",
+    "description": "شرکت ترانسپورتی بین‌المللی نوروزی ارائه‌دهنده خدمات حمل و نقل داخلی و بین‌المللی، ترخیص کالا و پشتیبانی 24/7.",
+    "url": "https://omidmehraban250-ctrl.github.io/nawroozi-transport1/",
+    "telephone": "+93779615141",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "هرات، سرک عمومی اسلام‌قلعه، مقابل ترمینال باربری، کوچه سید مختار، دکان ۶",
+      "addressLocality": "هرات",
+      "addressCountry": "AF"
+    },
+    "areaServed": ["افغانستان", "ایران", "پاکستان", "چین"],
+    "sameAs": []
+  }
+  </script>
 
   <!-- فونت مناسب فارسی (fallbacks) -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -141,7 +175,6 @@
       <button class="menu-toggle" aria-expanded="false" id="menuBtn">☰</button>
     </div>
 
-    <!-- mobile menu overlay -->
     <div id="mobileMenu" style="display:none;background:rgba(7,27,53,0.98);position:fixed;inset:0;z-index:1350;padding:40px">
       <div style="display:flex;align-items:center;justify-content:space-between;color:#fff;margin-bottom:24px">
         <div style="display:flex;gap:12px;align-items:center"><div class="logo">ن</div><div style="font-weight:800">نوروزی ترانسپورت</div></div>
@@ -281,14 +314,12 @@
   </footer>
 
   <script>
-    // mobile menu
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMenu = document.getElementById('closeMenu');
     menuBtn && menuBtn.addEventListener('click', ()=>{mobileMenu.style.display='block';menuBtn.setAttribute('aria-expanded','true')});
     closeMenu && closeMenu.addEventListener('click', ()=>{mobileMenu.style.display='none';menuBtn.setAttribute('aria-expanded','false')});
 
-    // simple contact form -> mailto fallback
     function sendMail(e){
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
@@ -297,7 +328,6 @@
       const message = document.getElementById('message').value.trim();
       const body = encodeURIComponent(`نام: ${name}%0Aشماره: ${phone}%0A%0A${message}`);
       const mailto = `mailto:omidmehraban250@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-      // show a friendly message and open mail client
       const formMsg = document.getElementById('formMsg');
       formMsg.textContent = 'در حال باز کردن برنامهٔ ایمیل شما...';
       window.location.href = mailto;
@@ -305,7 +335,6 @@
       return false;
     }
 
-    // smooth scrolling for internal links
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click',function(e){
         const href = this.getAttribute('href');
