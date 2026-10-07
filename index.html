@@ -27,122 +27,6 @@ body{
     font-family:Tahoma,Arial,sans-serif;
 }
 
-/* =====================================================
-   صفحه خوش آمدگویی
-===================================================== */
-
-#welcome-screen{
-    position:fixed;
-    inset:0;
-    width:100%;
-    height:100vh;
-    background:
-        linear-gradient(
-            rgba(4,18,38,.88),
-            rgba(4,18,38,.96)
-        ),
-        url("https://dispatch42.school/images/articles/1748615690428/articleImageMobile.jpeg");
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-
-    z-index:99999;
-
-    opacity:1;
-    visibility:visible;
-
-    transition:
-        opacity 1s ease,
-        visibility 1s ease;
-}
-
-#welcome-screen.hide{
-    opacity:0;
-    visibility:hidden;
-    pointer-events:none;
-}
-
-.welcome-content{
-    color:white;
-    padding:30px;
-    animation:welcomeZoom 1.2s ease;
-}
-
-.welcome-logo{
-    font-size:65px;
-    margin-bottom:15px;
-}
-
-.welcome-content h1{
-    font-family:"B Titr",Tahoma,sans-serif;
-    color:#f5b72f;
-    font-size:48px;
-    margin-bottom:15px;
-}
-
-.welcome-content h2{
-    font-family:"Noto Nastaliq Urdu",serif;
-    font-size:34px;
-    margin-bottom:25px;
-}
-
-.welcome-content p{
-    font-family:"Noto Nastaliq Urdu",serif;
-    font-size:22px;
-    color:#eee;
-}
-
-.welcome-line{
-    width:100px;
-    height:4px;
-    background:#f5b72f;
-    margin:20px auto;
-    border-radius:10px;
-}
-
-.loading{
-    margin:30px auto 0;
-    width:180px;
-    height:5px;
-    background:rgba(255,255,255,.2);
-    border-radius:10px;
-    overflow:hidden;
-}
-
-.loading span{
-    display:block;
-    height:100%;
-    width:0;
-    background:#f5b72f;
-    animation:loading 3s linear forwards;
-}
-
-@keyframes loading{
-    from{
-        width:0;
-    }
-    to{
-        width:100%;
-    }
-}
-
-@keyframes welcomeZoom{
-    from{
-        opacity:0;
-        transform:scale(.85);
-    }
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
-}
-
-
 /* ================= HEADER ================= */
 
 header{
@@ -182,7 +66,6 @@ nav a{
 nav a:hover{
     color:#f5b72f;
 }
-
 
 /* ================= HERO ================= */
 
@@ -229,7 +112,6 @@ nav a:hover{
     font-size:25px;
     margin-bottom:35px;
 }
-
 
 /* ================= BUTTONS ================= */
 
@@ -290,7 +172,6 @@ nav a:hover{
     transform:translateY(-3px);
 }
 
-
 /* ================= GENERAL ================= */
 
 section{
@@ -318,7 +199,6 @@ section{
     border-radius:10px;
 }
 
-
 /* ================= ABOUT ================= */
 
 .about{
@@ -332,7 +212,6 @@ section{
     font-family:"Noto Nastaliq Urdu",serif;
     font-size:23px;
 }
-
 
 /* ================= SERVICES ================= */
 
@@ -372,7 +251,6 @@ section{
     font-family:"Noto Nastaliq Urdu",serif;
     font-size:19px;
 }
-
 
 /* ================= GALLERY ================= */
 
@@ -421,7 +299,6 @@ section{
     font-size:18px;
 }
 
-
 /* ================= NUMBERS ================= */
 
 .numbers{
@@ -446,7 +323,6 @@ section{
     font-family:"Noto Nastaliq Urdu",serif;
     font-size:19px;
 }
-
 
 /* ================= REQUEST FORM ================= */
 
@@ -536,7 +412,6 @@ section{
     background:#16a958;
     transform:translateY(-2px);
 }
-
 
 /* ================= CONTACT ================= */
 
@@ -664,7 +539,6 @@ section{
     transform:translateY(-2px);
 }
 
-
 /* ================= FOOTER ================= */
 
 footer{
@@ -678,7 +552,6 @@ footer strong{
     color:#f5b72f;
     font-family:"B Titr",Tahoma,sans-serif;
 }
-
 
 /* ================= MOBILE ================= */
 
@@ -754,18 +627,6 @@ footer strong{
         align-items:flex-start;
     }
 
-    .welcome-content h1{
-        font-size:34px;
-    }
-
-    .welcome-content h2{
-        font-size:26px;
-    }
-
-    .welcome-content p{
-        font-size:18px;
-    }
-
 }
 
 @media(max-width:500px){
@@ -797,62 +658,12 @@ footer strong{
     .map-preview iframe{
         height:280px;
     }
-
-    .welcome-logo{
-        font-size:50px;
-    }
-
-    .welcome-content h1{
-        font-size:28px;
-    }
-
-    .welcome-content h2{
-        font-size:22px;
-    }
-
 }
 
 </style>
 </head>
 
-
 <body>
-
-
-<!-- =====================================================
-     صفحه خوش آمدگویی
-===================================================== -->
-
-<div id="welcome-screen">
-
-    <div class="welcome-content">
-
-        <div class="welcome-logo">
-            🚛
-        </div>
-
-        <h1>
-            خوش آمدید
-        </h1>
-
-        <div class="welcome-line"></div>
-
-        <h2>
-            شرکت ترانسپورتی بین المللی نوروزی
-        </h2>
-
-        <p>
-            دقت و سرعت در انتقال اموال تجارتی شما
-        </p>
-
-        <div class="loading">
-            <span></span>
-        </div>
-
-    </div>
-
-</div>
-
 
 <!-- ================= HEADER ================= -->
 
@@ -872,7 +683,6 @@ footer strong{
     </nav>
 
 </header>
-
 
 <!-- ================= HERO ================= -->
 
@@ -910,20 +720,20 @@ footer strong{
 
             <a
                 class="btn btn-telegram"
-                href="https://t.me/0704861149"
+                href="https://wa.me/93704861149"
                 target="_blank"
                 rel="noopener"
             >
-                ✈️ تماس در تلگرام
+                💬 تماس در تلگرام
             </a>
 
             <a
                 class="btn btn-instagram"
-                href="https://instagram.com/naweoozi_international1"
+                href="https://wa.me/@naweoozi_international1"
                 target="_blank"
                 rel="noopener"
             >
-                📷 تماس در انستاگرام
+                💬 تماس در انستاگرام
             </a>
 
         </div>
@@ -932,14 +742,16 @@ footer strong{
 
 </section>
 
-
 <!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
 
     <div class="section-title">
+
         <h2>درباره شرکت نوروزی</h2>
+
         <span></span>
+
     </div>
 
     <div class="about-content">
@@ -960,14 +772,16 @@ footer strong{
 
 </section>
 
-
 <!-- ================= SERVICES ================= -->
 
 <section id="services">
 
     <div class="section-title">
+
         <h2>خدمات ما</h2>
+
         <span></span>
+
     </div>
 
     <div class="services-grid">
@@ -1030,14 +844,16 @@ footer strong{
 
 </section>
 
-
 <!-- ================= GALLERY ================= -->
 
 <section class="gallery" id="gallery">
 
     <div class="section-title">
+
         <h2>ناوگان ترانسپورتی ما</h2>
+
         <span></span>
+
     </div>
 
     <div class="gallery-grid">
@@ -1050,6 +866,7 @@ footer strong{
             >
 
             <div class="truck-info">
+
                 <h3>
                     خدمات ترخیص کالای تجارتی شما
                 </h3>
@@ -1057,10 +874,10 @@ footer strong{
                 <p>
                     به طور 24 ساعته
                 </p>
+
             </div>
 
         </div>
-
 
         <div class="truck-card">
 
@@ -1082,7 +899,6 @@ footer strong{
             </div>
 
         </div>
-
 
         <div class="truck-card">
 
@@ -1109,7 +925,6 @@ footer strong{
     </div>
 
 </section>
-
 
 <!-- ================= NUMBERS ================= -->
 
@@ -1140,7 +955,6 @@ footer strong{
     </div>
 
 </section>
-
 
 <!-- ================= REQUEST ================= -->
 
@@ -1183,7 +997,6 @@ footer strong{
 
             </div>
 
-
             <div class="form-group">
 
                 <label for="phone">
@@ -1198,7 +1011,6 @@ footer strong{
                 >
 
             </div>
-
 
             <div class="form-group">
 
@@ -1244,11 +1056,10 @@ footer strong{
 
             </div>
 
-
             <div class="form-group">
 
                 <label for="destination">
-                    ��قصد / مسیر
+                    مقصد / مسیر
                 </label>
 
                 <input
@@ -1258,7 +1069,6 @@ footer strong{
                 >
 
             </div>
-
 
             <div class="form-group full">
 
@@ -1274,7 +1084,6 @@ footer strong{
 
             </div>
 
-
             <button
                 type="submit"
                 class="submit-request"
@@ -1288,7 +1097,6 @@ footer strong{
 
 </section>
 
-
 <!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
@@ -1301,7 +1109,6 @@ footer strong{
 
     </div>
 
-
     <div class="contact-grid">
 
         <div class="contact-box">
@@ -1313,52 +1120,68 @@ footer strong{
             <div class="phone-list">
 
                 <div class="phone-item">
+
                     <span class="phone-label">
                         غلام قادر نوری
                     </span>
 
-                    <a class="phone-number" href="tel:0795190285">
+                    <a
+                        class="phone-number"
+                        href="tel:0795190285"
+                    >
                         0795190285
                     </a>
+
                 </div>
 
-
                 <div class="phone-item">
+
                     <span class="phone-label">
                         احمد تواب نوروزی
                     </span>
 
-                    <a class="phone-number" href="tel:0779615141">
+                    <a
+                        class="phone-number"
+                        href="tel:0779615141"
+                    >
                         0779615141
                     </a>
+
                 </div>
 
-
                 <div class="phone-item">
+
                     <span class="phone-label">
                         احمد تواب نوروزی
                     </span>
 
-                    <a class="phone-number" href="tel:0704861149">
+                    <a
+                        class="phone-number"
+                        href="tel:0704861149"
+                    >
                         0704861149
                     </a>
+
                 </div>
 
-
                 <div class="phone-item">
+
                     <span class="phone-label">
                         شماره تماس آقاصاحب
                     </span>
 
-                    <a class="phone-number" href="tel:0794241052">
+                    <a
+                        class="phone-number"
+                        href="tel:0794241052"
+                    >
                         0794241052
                     </a>
+
                 </div>
 
             </div>
 
         </div>
-
 
         <div class="contact-box">
 
@@ -1393,7 +1216,6 @@ footer strong{
             </div>
 
         </div>
-
 
         <div class="map-box">
 
@@ -1430,7 +1252,6 @@ footer strong{
 
 </section>
 
-
 <!-- ================= FOOTER ================= -->
 
 <footer>
@@ -1449,56 +1270,21 @@ footer strong{
 
 </footer>
 
-
-<!-- ================= JAVASCRIPT ================= -->
+<!-- ================= WHATSAPP SCRIPT ================= -->
 
 <script>
-
-/* =========================================
-   صفحه خوش آمدگویی
-   بعد از 3.2 ثانیه محو می‌شود
-========================================= */
-
-window.addEventListener("load", function(){
-
-    setTimeout(function(){
-
-        const welcome =
-            document.getElementById("welcome-screen");
-
-        welcome.classList.add("hide");
-
-    }, 3200);
-
-});
-
-
-/* =========================================
-   ارسال فرم به واتساپ
-========================================= */
 
 function sendToWhatsApp(event){
 
     event.preventDefault();
 
-    const name =
-        document.getElementById("name").value.trim();
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const destination = document.getElementById("destination").value.trim();
+    const description = document.getElementById("description").value.trim();
 
-    const phone =
-        document.getElementById("phone").value.trim();
-
-    const service =
-        document.getElementById("service").value;
-
-    const destination =
-        document.getElementById("destination").value.trim();
-
-    const description =
-        document.getElementById("description").value.trim();
-
-
-    const message =
-`سلام، از طریق وب‌سایت شرکت ترانسپورتی بین المللی نوروزی درخواست دارم.
+    const message = `سلام، از طریق وب‌سایت شرکت ترانسپورتی بین المللی نوروزی درخواست دارم.
 
 👤 نام و نام خانوادگی:
 ${name}
@@ -1517,27 +1303,15 @@ ${description}
 
 لطفاً درخواست من را بررسی کرده و در صورت امکان اطلاعات و قیمت را ارسال نمایید.`;
 
+    const whatsappNumber = "93704861149";
 
-    const whatsappNumber =
-        "93704861149";
+    const whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
 
-
-    const whatsappURL =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        encodeURIComponent(message);
-
-
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
+    window.open(whatsappURL, "_blank");
 
 }
 
 </script>
-
 
 </body>
 </html>
