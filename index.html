@@ -2,15 +2,28 @@
 <html lang="fa" dir="rtl">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="description"
+          content="شرکت ترانسپورتی بین المللی نوروزی - خدمات حمل و نقل داخلی و بین المللی، انتقال کالا و ترخیص کالا">
+
+    <meta name="theme-color" content="#071b35">
 
     <title>شرکت ترانسپورتی بین المللی نوروزی</title>
 
-    <!-- فونت نستعلیق -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- فونت -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
 
         * {
             margin: 0;
@@ -18,40 +31,71 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
         body {
             background: #f5f7fa;
             color: #222;
             line-height: 1.9;
             font-family: Tahoma, Arial, sans-serif;
+            overflow-x: hidden;
         }
 
-        /* ================= HEADER ================= */
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
 
         header {
             background: #071b35;
             color: white;
-            padding: 18px 7%;
+
+            padding: 15px 7%;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             position: sticky;
             top: 0;
+
             z-index: 1000;
+
             box-shadow: 0 3px 15px rgba(0,0,0,0.25);
         }
 
         .logo {
-            font-family: "B Titr", "B Titr", Tahoma, sans-serif;
+            font-family: "B Titr", Tahoma, sans-serif;
             font-size: 26px;
             font-weight: bold;
             color: #f5b72f;
+            white-space: nowrap;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 12px;
+
+            padding: 7px 10px;
+
             font-family: "B Titr", Tahoma, sans-serif;
+
             transition: 0.3s;
         }
 
@@ -59,9 +103,29 @@
             color: #f5b72f;
         }
 
-        /* ================= HERO ================= */
+        /* دکمه منوی موبایل */
+
+        .menu-toggle {
+            display: none;
+
+            background: transparent;
+            border: none;
+
+            color: white;
+
+            font-size: 30px;
+
+            cursor: pointer;
+
+            padding: 3px 8px;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
 
         .hero {
+
             min-height: 650px;
 
             display: flex;
@@ -70,12 +134,12 @@
 
             text-align: center;
 
-            padding: 50px 20px;
+            padding: 70px 20px;
 
             background:
                 linear-gradient(
                     rgba(4,18,38,0.72),
-                    rgba(4,18,38,0.82)
+                    rgba(4,18,38,0.84)
                 ),
                 url("https://dispatch42.school/images/articles/1748615690428/articleImageMobile.jpeg");
 
@@ -84,47 +148,92 @@
         }
 
         .hero-content {
+            width: 100%;
             max-width: 1000px;
             color: white;
         }
 
         .hero h1 {
             font-family: "B Titr", Tahoma, sans-serif;
-            font-size: 50px;
+
+            font-size: clamp(30px, 5vw, 50px);
+
+            line-height: 1.6;
+
             color: #f5b72f;
+
             margin-bottom: 15px;
         }
 
         .hero h2 {
+
             font-family: "Noto Nastaliq Urdu", serif;
-            font-size: 34px;
+
+            font-size: clamp(22px, 3vw, 34px);
+
             font-weight: 600;
-            margin-bottom: 20px;
+
+            line-height: 2;
+
+            margin-bottom: 15px;
+
             color: white;
         }
 
         .hero p {
+
             font-family: "Noto Nastaliq Urdu", serif;
-            font-size: 25px;
-            margin-bottom: 35px;
+
+            font-size: clamp(18px, 2.5vw, 25px);
+
+            line-height: 2;
+
+            margin-bottom: 30px;
         }
 
-        /* ================= BUTTONS ================= */
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
 
         .buttons {
+
             display: flex;
+
             justify-content: center;
-            gap: 15px;
+
+            align-items: center;
+
+            gap: 12px;
+
             flex-wrap: wrap;
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 8px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 7px;
+
+            min-height: 48px;
+
+            padding: 11px 22px;
+
+            min-width: 180px;
+
+            border-radius: 9px;
+
             text-decoration: none;
+
             font-family: "B Titr", Tahoma, sans-serif;
+
             font-weight: bold;
+
+            font-size: 15px;
+
             transition: 0.3s;
         }
 
@@ -148,103 +257,181 @@
             transform: translateY(-3px);
         }
 
-        /* ================= GENERAL ================= */
+        .btn-telegram {
+            background: #229ED9;
+            color: white;
+        }
+
+        .btn-telegram:hover {
+            background: #1688bd;
+            transform: translateY(-3px);
+        }
+
+        /* =====================================================
+           GENERAL SECTIONS
+        ===================================================== */
 
         section {
-            padding: 80px 7%;
+            padding: 75px 7%;
         }
 
         .section-title {
+
             text-align: center;
-            margin-bottom: 50px;
+
+            margin-bottom: 45px;
         }
 
         .section-title h2 {
+
             color: #071b35;
+
             font-family: "B Titr", Tahoma, sans-serif;
-            font-size: 36px;
-            margin-bottom: 10px;
+
+            font-size: clamp(28px, 4vw, 36px);
+
+            line-height: 1.7;
+
+            margin-bottom: 8px;
         }
 
         .section-title span {
+
             display: block;
-            width: 80px;
+
+            width: 75px;
+
             height: 4px;
+
             background: #f5b72f;
+
             margin: auto;
+
             border-radius: 10px;
         }
 
-        /* ================= ABOUT ================= */
+        /* =====================================================
+           ABOUT
+        ===================================================== */
 
         .about {
             background: white;
         }
 
         .about-content {
+
             max-width: 1000px;
+
             margin: auto;
+
             text-align: center;
+
             font-family: "Noto Nastaliq Urdu", serif;
-            font-size: 23px;
+
+            font-size: clamp(18px, 2.3vw, 23px);
+
+            line-height: 2.2;
         }
 
-        /* ================= SERVICES ================= */
+        /* =====================================================
+           SERVICES
+        ===================================================== */
 
         .services-grid {
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 25px;
+
+            max-width: 1250px;
+
+            margin: auto;
         }
 
         .service {
+
             background: white;
-            padding: 35px 25px;
+
+            padding: 32px 24px;
+
             text-align: center;
+
             border-radius: 14px;
+
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
             transition: 0.3s;
         }
 
         .service:hover {
+
             transform: translateY(-8px);
+
             box-shadow: 0 12px 30px rgba(0,0,0,0.14);
         }
 
         .service-icon {
-            font-size: 50px;
-            margin-bottom: 15px;
+
+            font-size: 48px;
+
+            margin-bottom: 12px;
         }
 
         .service h3 {
+
             color: #071b35;
+
             font-family: "B Titr", Tahoma, sans-serif;
-            font-size: 23px;
-            margin-bottom: 10px;
+
+            font-size: 22px;
+
+            line-height: 1.7;
+
+            margin-bottom: 8px;
         }
 
         .service p {
+
             font-family: "Noto Nastaliq Urdu", serif;
-            font-size: 19px;
+
+            font-size: 18px;
+
+            line-height: 2.1;
         }
 
-        /* ================= TRUCK GALLERY ================= */
+        /* =====================================================
+           GALLERY
+        ===================================================== */
 
         .gallery {
             background: #eef2f6;
         }
 
         .gallery-grid {
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 25px;
+
+            max-width: 1250px;
+
+            margin: auto;
         }
 
         .truck-card {
+
             background: white;
+
             border-radius: 15px;
+
             overflow: hidden;
+
             box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+
             transition: 0.3s;
         }
 
@@ -253,200 +440,692 @@
         }
 
         .truck-card img {
+
             width: 100%;
+
             height: 270px;
+
             object-fit: cover;
+
             display: block;
         }
 
         .truck-info {
+
             padding: 20px;
+
             text-align: center;
         }
 
         .truck-info h3 {
+
             font-family: "B Titr", Tahoma, sans-serif;
+
             color: #071b35;
-            font-size: 22px;
+
+            font-size: 21px;
+
+            line-height: 1.8;
         }
 
         .truck-info p {
+
             font-family: "Noto Nastaliq Urdu", serif;
+
             font-size: 18px;
+
+            line-height: 2;
         }
 
-        /* ================= NUMBERS ================= */
+        /* =====================================================
+           NUMBERS
+        ===================================================== */
 
         .numbers {
+
             background: #071b35;
+
             color: white;
         }
 
         .numbers-grid {
+
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+
+            gap: 25px;
+
             text-align: center;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .number {
+
+            padding: 10px;
         }
 
         .number h3 {
+
             color: #f5b72f;
+
             font-family: Arial, sans-serif;
-            font-size: 42px;
+
+            font-size: clamp(30px, 4vw, 42px);
+
+            line-height: 1.3;
         }
 
         .number p {
+
             font-family: "Noto Nastaliq Urdu", serif;
-            font-size: 19px;
+
+            font-size: 18px;
+
+            line-height: 2;
         }
 
-        /* ================= CONTACT ================= */
+        /* =====================================================
+           CONTACT
+        ===================================================== */
 
         .contact {
             background: white;
         }
 
         .contact-grid {
+
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 30px;
+
             max-width: 1100px;
+
             margin: auto;
         }
 
         .contact-box {
+
             background: #f5f7fa;
-            padding: 35px;
+
+            padding: 32px;
+
             border-radius: 12px;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .contact-box h3 {
+
             color: #071b35;
+
             font-family: "B Titr", Tahoma, sans-serif;
-            font-size: 25px;
+
+            font-size: 24px;
+
+            line-height: 1.7;
+
             margin-bottom: 15px;
         }
 
         .contact-box p {
+
             font-family: "Noto Nastaliq Urdu", serif;
-            font-size: 20px;
+
+            font-size: 19px;
+
+            line-height: 2.2;
         }
 
+        /* شماره‌ها */
+
         .phone {
+
             display: block;
+
             color: #071b35;
+
             text-decoration: none;
+
+            font-family: Arial, sans-serif;
+
             font-size: 19px;
-            margin: 8px 0;
+
+            font-weight: bold;
+
+            margin: 12px 0;
+
             direction: ltr;
+
             text-align: right;
+
+            padding: 8px 0;
         }
 
         .phone:hover {
             color: #d49b14;
         }
 
-        /* Map button */
+        /* =====================================================
+           MAP
+        ===================================================== */
+
         .map-link {
+
             display: inline-flex;
+
             align-items: center;
-            gap: 10px;
-            padding: 10px 16px;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            min-height: 45px;
+
+            padding: 9px 18px;
+
             background: #0b6efd;
+
             color: white;
+
             border-radius: 8px;
+
             text-decoration: none;
+
             font-weight: bold;
-            margin-top: 12px;
+
+            margin-top: 15px;
+
+            transition: 0.3s;
         }
 
         .map-link:hover {
+
             background: #0956d1;
+
             transform: translateY(-2px);
         }
 
-        /* Small map preview container (optional) */
         .map-preview {
-            margin-top: 15px;
-            border-radius: 8px;
+
+            margin-top: 18px;
+
+            border-radius: 10px;
+
             overflow: hidden;
+
             box-shadow: 0 6px 20px rgba(0,0,0,0.08);
         }
 
         .map-preview iframe {
+
             width: 100%;
+
             height: 260px;
+
             border: 0;
+
             display: block;
         }
 
-        /* ================= FOOTER ================= */
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
         footer {
+
             background: #041225;
+
             color: white;
+
             text-align: center;
-            padding: 30px 20px;
+
+            padding: 28px 20px;
+        }
+
+        footer p {
+
+            font-size: 14px;
+
+            line-height: 2;
         }
 
         footer strong {
+
             color: #f5b72f;
+
             font-family: "B Titr", Tahoma, sans-serif;
         }
 
-        /* ================= MOBILE ================= */
+        /* =====================================================
+           TABLET
+        ===================================================== */
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
 
             header {
-                flex-direction: column;
-                gap: 12px;
+                padding: 15px 5%;
             }
 
-            nav {
-                text-align: center;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px;
-                font-size: 14px;
-            }
-
-            .hero {
-                min-height: 580px;
-            }
-
-            .hero h1 {
-                font-size: 35px;
-            }
-
-            .hero h2 {
-                font-size: 27px;
-            }
-
-            .hero p {
-                font-size: 20px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .services-grid,
             .gallery-grid {
-                grid-template-columns: 1fr;
-            }
 
-            .numbers-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .contact-grid {
-                grid-template-columns: 1fr;
+            .numbers-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            body {
+                font-size: 15px;
+            }
+
+            /* HEADER */
+
+            header {
+
+                padding: 12px 18px;
+
+                min-height: 65px;
+
+                flex-wrap: wrap;
+            }
+
+            .logo {
+
+                font-size: 20px;
+            }
+
+            .menu-toggle {
+
+                display: block;
+            }
+
+            nav {
+
+                display: none;
+
+                width: 100%;
+
+                flex-direction: column;
+
+                background: #071b35;
+
+                padding: 10px 0 5px;
+
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+
+                width: 100%;
+
+                text-align: center;
+
+                padding: 10px;
+
+                margin: 0;
+
+                font-size: 15px;
+
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+            }
+
+            /* HERO */
+
+            .hero {
+
+                min-height: 610px;
+
+                padding: 55px 18px;
+            }
+
+            .hero h1 {
+
+                font-size: 30px;
+
+                line-height: 1.8;
+            }
+
+            .hero h2 {
+
+                font-size: 22px;
+
+                line-height: 2.1;
+            }
+
+            .hero p {
+
+                font-size: 18px;
+
+                line-height: 2.2;
+
+                margin-bottom: 25px;
+            }
+
+            /* BUTTONS */
+
+            .buttons {
+
+                width: 100%;
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+            .btn {
+
+                width: 100%;
+
+                max-width: 330px;
+
+                min-height: 50px;
+
+                font-size: 15px;
+            }
+
+            /* SECTIONS */
+
+            section {
+
+                padding: 55px 16px;
+            }
+
+            .section-title {
+
+                margin-bottom: 32px;
             }
 
             .section-title h2 {
-                font-size: 30px;
+
+                font-size: 27px;
+
+                line-height: 1.8;
+            }
+
+            .section-title span {
+
+                width: 65px;
+
+                height: 3px;
+            }
+
+            /* ABOUT */
+
+            .about-content {
+
+                font-size: 18px;
+
+                line-height: 2.25;
+
+                text-align: justify;
+
+                text-align-last: center;
+            }
+
+            /* SERVICES */
+
+            .services-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 16px;
+            }
+
+            .service {
+
+                padding: 25px 20px;
+
+                border-radius: 12px;
+            }
+
+            .service-icon {
+
+                font-size: 43px;
+
+                margin-bottom: 8px;
+            }
+
+            .service h3 {
+
+                font-size: 20px;
+
+                line-height: 1.8;
+            }
+
+            .service p {
+
+                font-size: 17px;
+
+                line-height: 2.1;
+            }
+
+            /* GALLERY */
+
+            .gallery-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+            .truck-card {
+
+                border-radius: 12px;
+            }
+
+            .truck-card img {
+
+                height: 210px;
+            }
+
+            .truck-info {
+
+                padding: 17px 15px;
+            }
+
+            .truck-info h3 {
+
+                font-size: 19px;
+
+                line-height: 1.9;
+            }
+
+            .truck-info p {
+
+                font-size: 16px;
+
+                line-height: 2;
+            }
+
+            /* NUMBERS */
+
+            .numbers-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 12px;
+            }
+
+            .number {
+
+                padding: 14px 5px;
+            }
+
+            .number h3 {
+
+                font-size: 29px;
+            }
+
+            .number p {
+
+                font-size: 16px;
+
+                line-height: 2;
+            }
+
+            /* CONTACT */
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+            .contact-box {
+
+                padding: 25px 20px;
+
+                border-radius: 12px;
+            }
+
+            .contact-box h3 {
+
+                font-size: 21px;
+
+                text-align: center;
+
+                margin-bottom: 18px;
+            }
+
+            .contact-box p {
+
+                font-size: 17px;
+
+                line-height: 2.2;
+
+                text-align: center;
+            }
+
+            .phone {
+
+                font-size: 19px;
+
+                text-align: center;
+
+                background: white;
+
+                border-radius: 7px;
+
+                margin: 8px 0;
+
+                padding: 9px;
+            }
+
+            .map-link {
+
+                width: 100%;
+
+                min-height: 48px;
+            }
+
+            .map-preview {
+
+                margin-top: 15px;
+            }
+
+            .map-preview iframe {
+
+                height: 230px;
+            }
+
+            /* FOOTER */
+
+            footer {
+
+                padding: 24px 15px;
+            }
+
+            footer p {
+
+                font-size: 12px;
+
+                line-height: 2.2;
+            }
+        }
+
+        /* =====================================================
+           VERY SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 380px) {
+
+            .logo {
+
+                font-size: 18px;
+            }
+
+            .hero {
+
+                min-height: 590px;
+
+                padding-left: 14px;
+
+                padding-right: 14px;
+            }
+
+            .hero h1 {
+
+                font-size: 26px;
+            }
+
+            .hero h2 {
+
+                font-size: 20px;
+            }
+
+            .hero p {
+
+                font-size: 17px;
+            }
+
+            .btn {
+
+                max-width: 100%;
+
+                font-size: 14px;
+            }
+
+            section {
+
+                padding-left: 13px;
+
+                padding-right: 13px;
+            }
+
+            .section-title h2 {
+
+                font-size: 24px;
+            }
+
+            .number h3 {
+
+                font-size: 25px;
+            }
+
+            .number p {
+
+                font-size: 14px;
             }
         }
 
@@ -456,21 +1135,45 @@
 
 <body>
 
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header>
 
     <div class="logo">
         نوروزی ترانسپورت
     </div>
 
-    <nav>
-        <a href="#home">خانه</a>
-        <a href="#about">درباره ما</a>
-        <a href="#services">خدمات</a>
-        <a href="#gallery">ناوگان ما</a>
-        <a href="#contact">تماس با ما</a>
+    <button
+        class="menu-toggle"
+        onclick="toggleMenu()"
+        aria-label="باز کردن منو">
+
+        ☰
+
+    </button>
+
+    <nav id="mobileNav">
+
+        <a href="#home" onclick="closeMenu()">خانه</a>
+
+        <a href="#about" onclick="closeMenu()">درباره ما</a>
+
+        <a href="#services" onclick="closeMenu()">خدمات</a>
+
+        <a href="#gallery" onclick="closeMenu()">ناوگان ما</a>
+
+        <a href="#contact" onclick="closeMenu()">تماس با ما</a>
+
     </nav>
 
 </header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero" id="home">
 
@@ -491,8 +1194,34 @@
 
         <div class="buttons">
 
-            <a class="btn btn-primary" href="#services">مشاهده خدمات</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/93779615141" target="_blank">0779615141 تماس در واتساپ</a>
+            <a class="btn btn-primary"
+               href="#services">
+
+                مشاهده خدمات
+
+            </a>
+
+            <!-- واتساپ -->
+
+            <a class="btn btn-whatsapp"
+               href="https://wa.me/93779615141"
+               target="_blank"
+               rel="noopener">
+
+                🟢 0779615141 واتساپ
+
+            </a>
+
+            <!-- تلگرام -->
+
+            <a class="btn btn-telegram"
+               href="https://t.me/+93704861149"
+               target="_blank"
+               rel="noopener">
+
+                ✈️ 0704861149 تلگرام
+
+            </a>
 
         </div>
 
@@ -500,171 +1229,432 @@
 
 </section>
 
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
 <section class="about" id="about">
 
     <div class="section-title">
-        <h2>درباره شرکت نوروزی</h2>
+
+        <h2>
+            درباره شرکت نوروزی
+        </h2>
+
         <span></span>
+
     </div>
 
     <div class="about-content">
-        <p>شرکت ترانسپورتی بین المللی نوروزی با ارائه خدمات حمل و نقل داخلی و خارجی، آماده انتقال اموال تجارتی شما به تمام نقاط کشور و مسیرهای بین المللی می‌باشد.</p>
+
+        <p>
+
+            شرکت ترانسپورتی بین المللی نوروزی
+            با ارائه خدمات حمل و نقل داخلی و خارجی،
+            آماده انتقال اموال تجارتی شما به تمام نقاط کشور
+            و مسیرهای بین المللی می‌باشد.
+
+        </p>
+
         <br>
-        <p>دقت، سرعت و امنیت در انتقال کالا، اساس فعالیت ماست.</p>
+
+        <p>
+
+            دقت، سرعت و امنیت در انتقال کالا،
+            اساس فعالیت ماست.
+
+        </p>
+
     </div>
 
 </section>
 
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
 <section id="services">
 
     <div class="section-title">
-        <h2>خدمات ما</h2>
+
+        <h2>
+            خدمات ما
+        </h2>
+
         <span></span>
+
     </div>
 
     <div class="services-grid">
 
         <div class="service">
-            <div class="service-icon">🚛</div>
-            <h3>حمل و نقل داخلی</h3>
-            <p>انتقال اموال تجارتی به تمام نقاط افغانستان با سرعت و امنیت بالا.</p>
+
+            <div class="service-icon">
+                🚛
+            </div>
+
+            <h3>
+                حمل و نقل داخلی
+            </h3>
+
+            <p>
+                انتقال اموال تجارتی به تمام نقاط افغانستان
+                با سرعت و امنیت بالا.
+            </p>
+
         </div>
 
-        <div class="service">
-            <div class="service-icon">🌍</div>
-            <h3>ترانسپورت بین المللی</h3>
-            <p>ارائه خدمات حمل و نقل بین المللی برای انتقال کالاهای تجارتی.</p>
-        </div>
 
         <div class="service">
-            <div class="service-icon">📦</div>
-            <h3>انتقال کالا</h3>
-            <p>انتقال صحیح و سریع انواع کالاهای تجارتی به مقصد مورد نظر.</p>
+
+            <div class="service-icon">
+                🌍
+            </div>
+
+            <h3>
+                ترانسپورت بین المللی
+            </h3>
+
+            <p>
+                ارائه خدمات حمل و نقل بین المللی
+                برای انتقال کالاهای تجارتی.
+            </p>
+
         </div>
 
-        <div class="service">
-            <div class="service-icon">🚢</div>
-            <h3>خدمات حمل بار</h3>
-            <p>هماهنگی و انتقال بار با وسایل نقلیه مناسب برای انواع محموله‌ها.</p>
-        </div>
 
         <div class="service">
-            <div class="service-icon">❄️</div>
-            <h3>حمل بار حساس</h3>
-            <p>انتقال کالاهایی که نیازمند مراقبت و شرایط ویژه هستند.</p>
+
+            <div class="service-icon">
+                📦
+            </div>
+
+            <h3>
+                انتقال کالا
+            </h3>
+
+            <p>
+                انتقال صحیح و سریع انواع کالاهای تجارتی
+                به مقصد مورد نظر.
+            </p>
+
         </div>
 
+
         <div class="service">
-            <div class="service-icon">📋</div>
-            <h3>ترخیص کالا</h3>
-            <p>خدمات مربوط به ترخیص و هماهنگی امور حمل و نقل کالا.</p>
+
+            <div class="service-icon">
+                🚢
+            </div>
+
+            <h3>
+                خدمات حمل بار
+            </h3>
+
+            <p>
+                هماهنگی و انتقال بار با وسایل نقلیه مناسب
+                برای انواع محموله‌ها.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                ❄️
+            </div>
+
+            <h3>
+                حمل بار حساس
+            </h3>
+
+            <p>
+                انتقال کالاهایی که نیازمند مراقبت
+                و شرایط ویژه هستند.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">
+                📋
+            </div>
+
+            <h3>
+                ترخیص کالا
+            </h3>
+
+            <p>
+                خدمات مربوط به ترخیص و هماهنگی
+                امور حمل و نقل کالا.
+            </p>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
 <section class="gallery" id="gallery">
 
     <div class="section-title">
-        <h2>ناوگان ترانسپورتی ما</h2>
+
+        <h2>
+            ناوگان ترانسپورتی ما
+        </h2>
+
         <span></span>
+
     </div>
 
     <div class="gallery-grid">
 
         <div class="truck-card">
-            <img src="https://spotinc.com/wp-content/uploads/2025/03/shutterstock_2513257961-1-1536x1024.jpg" alt="کامیون ترانسپورتی">
+
+            <img
+                src="https://spotinc.com/wp-content/uploads/2025/03/shutterstock_2513257961-1-1536x1024.jpg"
+                alt="کامیون ترانسپورتی"
+                loading="lazy">
+
             <div class="truck-info">
-                <h3>خدمات ترخیز کالای تجارتی شما</h3>
-                <p>به طور 24 ساعته</p>
+
+                <h3>
+                    خدمات ترخیص کالای تجارتی شما
+                </h3>
+
+                <p>
+                    به طور 24 ساعته
+                </p>
+
             </div>
+
         </div>
 
-        <div class="truck-card">
-            <img src="https://cdn.prod.website-files.com/6633e3d3afa212fa48c40b96/6633e3d3afa212fa48c40bda_AdobeStock_579713116-p-2600.jpg" alt="کامیون باربری">
-            <div class="truck-info">
-                <h3>حمل بار بین شهری</h3>
-                <p>انتقال سریع و مطمئن محموله‌ها</p>
-            </div>
-        </div>
 
         <div class="truck-card">
-            <img src="https://fatiguescience.com/hubfs/road%20transportation%20operations.jpeg" alt="کامیون حمل و نقل">
+
+            <img
+                src="https://cdn.prod.website-files.com/6633e3d3afa212fa48c40b96/6633e3d3afa212fa48c40bda_AdobeStock_579713116-p-2600.jpg"
+                alt="کامیون باربری"
+                loading="lazy">
+
             <div class="truck-info">
-                <h3>انتقال اموال تجارتی شما به تمام نقاط کشور، ایران ، پاکستان، چین و غیره</h3>
-                <p>خدمات سرتاسری داخلی و خارجی و ترخیز کالا</p>
+
+                <h3>
+                    حمل بار بین شهری
+                </h3>
+
+                <p>
+                    انتقال سریع و مطمئن محموله‌ها
+                </p>
+
             </div>
+
+        </div>
+
+
+        <div class="truck-card">
+
+            <img
+                src="https://fatiguescience.com/hubfs/road%20transportation%20operations.jpeg"
+                alt="کامیون حمل و نقل"
+                loading="lazy">
+
+            <div class="truck-info">
+
+                <h3>
+                    انتقال اموال تجارتی شما به تمام نقاط کشور،
+                    ایران، پاکستان، چین و غیره
+                </h3>
+
+                <p>
+                    خدمات سرتاسری داخلی و خارجی
+                    و ترخیص کالا
+                </p>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
+
+
+<!-- =====================================================
+     NUMBERS
+===================================================== -->
 
 <section class="numbers">
 
     <div class="numbers-grid">
 
         <div class="number">
-            <h3>30+</h3>
-            <p>سال تجربه</p>
+
+            <h3>
+                30+
+            </h3>
+
+            <p>
+                سال تجربه
+            </p>
+
         </div>
 
-        <div class="number">
-            <h3>1000000+</h3>
-            <p>محموله انتقال داده شده</p>
-        </div>
 
         <div class="number">
-            <h3>+</h3>
-            <p>مسیر حمل و نقل</p>
+
+            <h3>
+                1000000+
+            </h3>
+
+            <p>
+                محموله انتقال داده شده
+            </p>
+
         </div>
 
+
         <div class="number">
-            <h3>24/7</h3>
-            <p>پشتیبانی</p>
+
+            <h3>
+                +
+            </h3>
+
+            <p>
+                مسیر حمل و نقل
+            </p>
+
+        </div>
+
+
+        <div class="number">
+
+            <h3>
+                24/7
+            </h3>
+
+            <p>
+                پشتیبانی
+            </p>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
 <section class="contact" id="contact">
 
     <div class="section-title">
-        <h2>تماس با ما</h2>
+
+        <h2>
+            تماس با ما
+        </h2>
+
         <span></span>
+
     </div>
+
 
     <div class="contact-grid">
 
-        <div class="contact-box">
-            <h3>شماره‌های تماس</h3>
 
-            <a class="phone" href="tel:0795190285">0795190285</a>
-            <a class="phone" href="tel:0779615141">0779615141</a>
-            <a class="phone" href="tel:0794241052">0794241052</a>
-            <a class="phone" href="tel:0704861149">0704861149</a>
+        <!-- شماره‌ها -->
+
+        <div class="contact-box">
+
+            <h3>
+                شماره‌های تماس
+            </h3>
+
+            <a class="phone"
+               href="tel:0795190285">
+
+                0795190285
+
+            </a>
+
+            <a class="phone"
+               href="tel:0779615141">
+
+                0779615141
+
+            </a>
+
+            <a class="phone"
+               href="tel:0794241052">
+
+                0794241052
+
+            </a>
+
+            <a class="phone"
+               href="tel:0704861149">
+
+                0704861149
+
+            </a>
+
         </div>
 
+
+        <!-- آدرس -->
+
         <div class="contact-box">
-            <h3>آدرس شرکت</h3>
+
+            <h3>
+                آدرس شرکت
+            </h3>
+
             <p>
+
                 هرات، سرک عمومی اسلام‌قلعه،
                 مقابل ترمینال باربری،
                 کوچه سید مختار، دکان ۶
+
             </p>
 
             <br>
 
-            <p>شعبه کمیسیون: دکان نمبر ۱۸</p>
+            <p>
+                شعبه کمیسیون: دکان نمبر ۱۸
+            </p>
 
-            <!-- Google Maps link added here -->
-            <a class="map-link" href="https://maps.app.goo.gl/XY5fRtrkTeNLmcCS7" target="_blank" rel="noopener">📍 نمایش روی نقشه</a>
 
-            <!-- Optional small embedded preview using Google Maps embed (fallback to link if embed not available) -->
-            <div class="map-preview" aria-hidden="true">
-                <iframe src="https://www.google.com/maps?q=Herat%20Islam%20Qala&output=embed"></iframe>
+            <a class="map-link"
+               href="https://maps.app.goo.gl/XY5fRtrkTeNLmcCS7"
+               target="_blank"
+               rel="noopener">
+
+                📍 نمایش روی نقشه
+
+            </a>
+
+
+            <div class="map-preview">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Herat%20Islam%20Qala&output=embed"
+                    loading="lazy"
+                    title="موقعیت شرکت نوروزی روی نقشه">
+                </iframe>
+
             </div>
 
         </div>
@@ -673,13 +1663,52 @@
 
 </section>
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
+
     <p>
+
         © 2026
-        <strong>شرکت ترانسپورتی بین المللی نوروزی</strong>
+
+        <strong>
+            شرکت ترانسپورتی بین المللی نوروزی
+        </strong>
+
         - تمامی حقوق محفوظ است.
+
     </p>
+
 </footer>
+
+
+<!-- =====================================================
+     MOBILE MENU JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    function toggleMenu() {
+
+        const nav = document.getElementById("mobileNav");
+
+        nav.classList.toggle("active");
+
+    }
+
+
+    function closeMenu() {
+
+        const nav = document.getElementById("mobileNav");
+
+        nav.classList.remove("active");
+
+    }
+
+</script>
 
 </body>
 
