@@ -999,51 +999,107 @@
                 border-radius: 12px;
             }
 
-            /* ... */
+            .contact-box h3 {
+
+                font-size: 22px;
+
+                line-height: 1.8;
+            }
+
+            .contact-box p {
+
+                font-size: 17px;
+
+                line-height: 2.1;
+            }
+
+            .phone {
+
+                font-size: 17px;
+            }
+
+            .map-link {
+
+                width: 100%;
+
+                font-size: 14px;
+            }
+
+            .map-preview iframe {
+
+                height: 220px;
+            }
+
+            footer p {
+
+                font-size: 13px;
+            }
+        }
+
+        .chat-buttons {
+            position: fixed;
+            bottom: 18px;
+            right: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 2000;
+        }
+
+        .chat-btn {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        .chat-btn:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.04);
+        }
+
+        .chat-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .chat-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .chat-btn.telegram {
+            background: #2A9DF4;
         }
 
     </style>
 
 </head>
 
-
 <body>
-
-
-<!-- ================= HEADER ================= -->
 
 <header>
 
     <div class="logo">
-        شرکت ترانسپورتی باربری بین المللی نوروزی
+        نوروزی ترانسپورت
     </div>
 
-    <button class="menu-toggle" aria-label="باز کردن منو">
+    <button class="menu-toggle" aria-label="منوی موبایل" onclick="toggleMenu()">☰</button>
 
-        ☰
-
-    </button>
-
-    <nav id="mobileNav">
-
-        <a href="#home" onclick="closeMenu()">خانه</a>
-
-        <a href="#about" onclick="closeMenu()">درباره ما</a>
-
-        <a href="#services" onclick="closeMenu()">خدمات</a>
-
-        <a href="#gallery" onclick="closeMenu()">ناوگان ما</a>
-
-        <a href="#contact" onclick="closeMenu()">تماس با ما</a>
-
+    <nav id="mainNav">
+        <a href="#home">خانه</a>
+        <a href="#about">درباره ما</a>
+        <a href="#services">خدمات</a>
+        <a href="#gallery">ناوگان ما</a>
+        <a href="#contact">تماس با ما</a>
     </nav>
 
 </header>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
 
 <section class="hero" id="home">
 
@@ -1064,33 +1120,22 @@
 
         <div class="buttons">
 
-            <a class="btn btn-primary"
-               href="#services">
+            <a class="btn btn-primary" href="#services">مشاهده خدمات</a>
 
-                مشاهده خدمات
-
+            <a class="btn btn-whatsapp" href="https://wa.me/93704861149" target="_blank" rel="noopener" aria-label="چت واتساپ">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path fill="#FFFFFF" d="M20.52 3.48A11.9 11.9 0 0012 0C5.373 0 0 5.373 0 12c0 2.116.556 4.088 1.614 5.835L0 24l6.46-1.688A11.922 11.922 0 0012 24c6.627 0 12-5.373 12-12 0-3.208-1.25-6.222-3.48-8.52zM12 22.08a10.06 10.06 0 01-4.96-1.29l-.36-.215-3.83.999.99-3.73-.236-.384A10.02 10.02 0 012.04 12 9.96 9.96 0 0112 2.04 9.96 9.96 0 0121.96 12 9.96 9.96 0 0112 22.08z"/>
+                    <path fill="#25D366" d="M17.472 14.382c-.297-.148-1.758-.867-2.03-.967-.273-.099-.472-.148-.672.148-.198.297-.768.966-.94 1.164-.173.198-.347.223-.644.074-.297-.148-1.255-.462-2.39-1.48-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.151-.173.2-.297.3-.495.099-.198.05-.371-.025-.52-.074-.148-.672-1.62-.92-2.22-.242-.58-.487-.5-.672-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.064 2.876 1.213 3.074c.148.198 2.095 3.2 5.076 4.487 3.53 1.6 3.53 1.067 4.16 1.001.13-.053.297-.148.339-.297.042-.148.042-.548-.255-.697z"/>
+                </svg>
+                0704861149 تماس در واتساپ
             </a>
 
-            <!-- واتساپ -->
-
-            <a class="btn btn-whatsapp"
-               href="https://wa.me/93779615141"
-               target="_blank"
-               rel="noopener">
-
-                🟢 0779615141 واتساپ
-
-            </a>
-
-            <!-- تلگرام -->
-
-            <a class="btn btn-telegram"
-               href="https://t.me/+93704861149"
-               target="_blank"
-               rel="noopener">
-
-                ✈️ 0704861149 تلگرام
-
+            <a class="btn btn-telegram" href="#" onclick="openTelegramChat(event)" aria-label="چت تلگرام">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path fill="#ffffff" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0Z"/>
+                    <path fill="#2A9DF4" d="M5.01 12.012c.817 4.435 3.027 6.931 3.027 6.931s.495.327.936.15c.44-.177 2.975-1.916 3.493-2.169.517-.253 4.422-3.099 4.992-3.497.57-.398.716-.64.258-.965-.458-.325-8.185-4.71-8.185-4.71s-.45-.257-.89.002c-.44.258-2.572 2.14-3.01 2.58-.437.44-1.235 1.762-.621 5.678z"/>
+                </svg>
+                تلگرام
             </a>
 
         </div>
@@ -1098,159 +1143,170 @@
     </div>
 
 </section>
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
 
 <section class="about" id="about">
 
     <div class="section-title">
-
-        <h2>
-            درباره شرکت نوروزی
-        </h2>
-
+        <h2>درباره شرکت نوروزی</h2>
         <span></span>
-
     </div>
 
     <div class="about-content">
-
-        <p>
-
-            شرکت ترانسپورتی بین المللی نوروزی
-            با ارائه خدمات حمل و نقل داخلی و خارجی،
-            آماده انتقال اموال تجارتی شما به تمام نقاط کشور
-            و مسیرهای بین المللی می‌باشد.
-
-        </p>
-
+        <p>شرکت ترانسپورتی بین المللی نوروزی با ارائه خدمات حمل و نقل داخلی و خارجی، آماده انتقال اموال تجارتی شما به تمام نقاط کشور و مسیرهای بین المللی می‌باشد.</p>
         <br>
+        <p>دقت، سرعت و امنیت در انتقال کالا، اساس فعالیت ماست.</p>
+    </div>
 
-        <p>
+</section>
 
-            دقت، سرعت و امنیت در انتقال کالا،
-            اساس فعالیت ماست.
+<section id="services">
 
-        </p>
+    <div class="section-title">
+        <h2>خدمات ما</h2>
+        <span></span>
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service">
+            <div class="service-icon">🚛</div>
+            <h3>حمل و نقل داخلی</h3>
+            <p>انتقال اموال تجارتی به تمام نقاط افغانستان با سرعت و امنیت بالا.</p>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">🌍</div>
+            <h3>ترانسپورت بین المللی</h3>
+            <p>ارائه خدمات حمل و نقل بین المللی برای انتقال کالاهای تجارتی.</p>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">📦</div>
+            <h3>انتقال کالا</h3>
+            <p>انتقال صحیح و سریع انواع کالاهای تجارتی به مقصد مورد نظر.</p>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">🚢</div>
+            <h3>خدمات حمل بار</h3>
+            <p>هماهنگی و انتقال بار با وسایل نقلیه مناسب برای انواع محموله‌ها.</p>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">❄️</div>
+            <h3>حمل بار حساس</h3>
+            <p>انتقال کالاهایی که نیازمند مراقبت و شرایط ویژه هستند.</p>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">📋</div>
+            <h3>ترخیص کالا</h3>
+            <p>خدمات مربوط به ترخیص و هماهنگی امور حمل و نقل کالا.</p>
+        </div>
 
     </div>
 
 </section>
 
+<section class="gallery" id="gallery">
 
-<!-- =====================================================
-     ... rest of file ...
-===================================================== -->
+    <div class="section-title">
+        <h2>ناوگان ترانسپورتی ما</h2>
+        <span></span>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="truck-card">
+            <img src="https://spotinc.com/wp-content/uploads/2025/03/shutterstock_2513257961-1-1536x1024.jpg" alt="کامیون ترانسپورتی">
+            <div class="truck-info">
+                <h3>خدمات ترخیز کالای تجارتی شما</h3>
+                <p>به طور 24 ساعته</p>
+            </div>
+        </div>
+
+        <div class="truck-card">
+            <img src="https://cdn.prod.website-files.com/6633e3d3afa212fa48c40b96/6633e3d3afa212fa48c40bda_AdobeStock_579713116-p-2600.jpg" alt="کامیون باربری">
+            <div class="truck-info">
+                <h3>حمل بار بین شهری</h3>
+                <p>انتقال سریع و مطمئن محموله‌ها</p>
+            </div>
+        </div>
+
+        <div class="truck-card">
+            <img src="https://fatiguescience.com/hubfs/road%20transportation%20operations.jpeg" alt="کامیون حمل و نقل">
+            <div class="truck-info">
+                <h3>انتقال اموال تجارتی شما به تمام نقاط کشور، ایران ، پاکستان، چین و غیره</h3>
+                <p>خدمات سرتاسری داخلی و خارجی و ترخیز کالا</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="numbers">
+
+    <div class="numbers-grid">
+
+        <div class="number">
+            <h3>30+</h3>
+            <p>سال تجربه</p>
+        </div>
+
+        <div class="number">
+            <h3>1000000+</h3>
+            <p>محموله انتقال داده شده</p>
+        </div>
+
+        <div class="number">
+            <h3>+</h3>
+            <p>مسیر حمل و نقل</p>
+        </div>
+
+        <div class="number">
+            <h3>24/7</h3>
+            <p>پشتیبانی</p>
+        </div>
+
+    </div>
+
+</section>
 
 <section class="contact" id="contact">
 
     <div class="section-title">
-
-        <h2>
-            تماس با ما
-        </h2>
-
+        <h2>تماس با ما</h2>
         <span></span>
-
     </div>
-
 
     <div class="contact-grid">
 
-
-        <!-- شماره‌ها -->
-
         <div class="contact-box">
+            <h3>شماره‌های تماس</h3>
 
-            <h3>
-                شماره‌های تماس
-            </h3>
-
-            <a class="phone"
-               href="tel:0795190285">
-
-                0795190285
-
-            </a>
-
-            <a class="phone"
-               href="tel:0779615141">
-
-                0779615141
-
-            </a>
-
-            <a class="phone"
-               href="tel:0794241052">
-
-                0794241052
-
-            </a>
-
-            <a class="phone"
-               href="tel:0704861149">
-
-                0704861149
-
-            </a>
-
-            <!-- دکمه چت تلگرام اضافه شده -->
-            <a class="phone"
-               href="https://t.me/+93704861149"
-               target="_blank"
-               rel="noopener">
-
-                ✈️ 0704861149 تلگرام
-
-            </a>
-
+            <a class="phone" href="tel:0704861149">0704861149</a>
+            <a class="phone" href="tel:0795190285">0795190285</a>
+            <a class="phone" href="tel:0779615141">0779615141</a>
+            <a class="phone" href="tel:0794241052">0794241052</a>
         </div>
 
-
-        <!-- آدرس -->
-
         <div class="contact-box">
-
-            <h3>
-                آدرس شرکت
-            </h3>
-
+            <h3>آدرس شرکت</h3>
             <p>
-
                 هرات، سرک عمومی اسلام‌قلعه،
                 مقابل ترمینال باربری،
                 کوچه سید مختار، دکان ۶
-
             </p>
 
             <br>
 
-            <p>
-                شعبه کمیسیون: دکان نمبر ۱۸
-            </p>
+            <p>شعبه کمیسیون: دکان نمبر ۱۸</p>
 
+            <a class="map-link" href="https://maps.app.goo.gl/XY5fRtrkTeNLmcCS7" target="_blank" rel="noopener">📍 نمایش روی نقشه</a>
 
-            <a class="map-link"
-               href="https://maps.app.goo.gl/XY5fRtrkTeNLmcCS7"
-               target="_blank"
-               rel="noopener">
-
-                📍 نمایش روی نقشه
-
-            </a>
-
-
-            <div class="map-preview">
-
-                <iframe
-                    src="https://www.google.com/maps?q=Herat%20Islam%20Qala&output=embed"
-                    loading="lazy"
-                    title="موقعیت شرکت نوروزی روی نقشه">
-                </iframe>
-
+            <div class="map-preview" aria-hidden="true">
+                <iframe src="https://www.google.com/maps?q=Herat%20Islam%20Qala&output=embed"></iframe>
             </div>
 
         </div>
@@ -1259,17 +1315,56 @@
 
 </section>
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer>
-
     <p>
-
         © 2026
+        <strong>شرکت ترانسپورتی بین المللی نوروزی</strong>
+        - تمامی حقوق محفوظ است.
+    </p>
+</footer>
 
-        <strong>
-            شرکت ترانسپورتی بین المللی نوروزی
-        </strong>
+<div class="chat-buttons" aria-hidden="false">
+    <a class="chat-btn whatsapp" href="https://wa.me/93704861149" target="_blank" rel="noopener" aria-label="چت واتساپ">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="#FFFFFF" d="M20.52 3.48A11.9 11.9 0 0012 0C5.373 0 0 5.373 0 12c0 2.116.556 4.088 1.614 5.835L0 24l6.46-1.688A11.922 11.922 0 0012 24c6.627 0 12-5.373 12-12 0-3.208-1.25-6.222-3.48-8.52zM12 22.08a10.06 10.06 0 01-4.96-1.29l-.36-.215-3.83.999.99-3.73-.236-.384A10.02 10.02 0 012.04 12 9.96 9.96 0 0112 2.04 9.96 9.96 0 0121.96 12 9.96 9.96 0 0112 22.08z"/>
+            <path fill="#25D366" d="M17.472 14.382c-.297-.148-1.758-.867-2.03-.967-.273-.099-.472-.148-.672.148-.198.297-.768.966-.94 1.164-.173.198-.347.223-.644.074-.297-.148-1.255-.462-2.39-1.48-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.151-.173.2-.297.3-.495.099-.198.05-.371-.025-.52-.074-.148-.672-1.62-.92-2.22-.242-.58-.487-.5-.672-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.064 2.876 1.213 3.074c.148.198 2.095 3.2 5.076 4.487 3.53 1.6 3.53 1.067 4.16 1.001.13-.053.297-.148.339-.297.042-.148.042-.548-.255-.697z"/>
+        </svg>
+    </a>
+
+    <a class="chat-btn telegram" href="#" onclick="openTelegramChat(event)" aria-label="چت تلگرام">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="#ffffff" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0Z"/>
+            <path fill="#2A9DF4" d="M5.01 12.012c.817 4.435 3.027 6.931 3.027 6.931s.495.327.936.15c.44-.177 2.975-1.916 3.493-2.169.517-.253 4.422-3.099 4.992-3.497.57-.398.716-.64.258-.965-.458-.325-8.185-4.71-8.185-4.71s-.45-.257-.89.002c-.44.258-2.572 2.14-3.01 2.58-.437.44-1.235 1.762-.621 5.678z"/>
+        </svg>
+    </a>
+</div>
+
+<script>
+    const telegramPhoneIntl = '93704861149';
+
+    function openTelegramChat(e) {
+        e.preventDefault();
+
+        const tgProtocol = 'tg://resolve?phone=' + telegramPhoneIntl;
+        const webFallback = 'https://t.me/+' + telegramPhoneIntl;
+
+        const ifr = document.createElement('iframe');
+        ifr.style.display = 'none';
+        ifr.src = tgProtocol;
+        document.body.appendChild(ifr);
+
+        setTimeout(function() {
+            document.body.removeChild(ifr);
+            window.open(webFallback, '_blank', 'noopener');
+        }, 800);
+    }
+
+    function toggleMenu() {
+        const nav = document.getElementById('mainNav');
+        nav.classList.toggle('active');
+    }
+</script>
+
+</body>
+
+</html>
