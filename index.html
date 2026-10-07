@@ -76,14 +76,12 @@ nav a:hover{
     justify-content:center;
     text-align:center;
     padding:50px 20px;
-
     background:
     linear-gradient(
         rgba(4,18,38,.72),
         rgba(4,18,38,.84)
     ),
     url("https://dispatch42.school/images/articles/1748615690428/articleImageMobile.jpeg");
-
     background-size:cover;
     background-position:center;
 }
@@ -142,13 +140,26 @@ nav a:hover{
     transform:translateY(-3px);
 }
 
+.btn-whatsapp,
+.btn-telegram{
+    color:white;
+}
+
 .btn-whatsapp{
     background:#20c76a;
-    color:white;
 }
 
 .btn-whatsapp:hover{
     background:#16a958;
+    transform:translateY(-3px);
+}
+
+.btn-telegram{
+    background:#229ED9;
+}
+
+.btn-telegram:hover{
+    background:#1a7ec0;
     transform:translateY(-3px);
 }
 
@@ -407,8 +418,6 @@ section{
     gap:25px;
 }
 
-/* Contact cards */
-
 .contact-box{
     background:white;
     padding:30px;
@@ -424,8 +433,6 @@ section{
     border-bottom:2px solid #f5b72f;
     padding-bottom:10px;
 }
-
-/* Phone list */
 
 .phone-list{
     display:flex;
@@ -460,8 +467,6 @@ section{
     color:#555;
 }
 
-/* Address */
-
 .address-text{
     font-family:"Noto Nastaliq Urdu",serif;
     font-size:20px;
@@ -471,8 +476,6 @@ section{
 .address-line{
     margin-bottom:10px;
 }
-
-/* Map */
 
 .map-box{
     grid-column:1 / -1;
@@ -651,14 +654,9 @@ footer strong{
 </style>
 </head>
 
-
 <body>
 
-
-<!-- ================= HEADER ================= -->
-
 <header>
-
     <div class="logo">
         نوروزی ترانسپورت
     </div>
@@ -671,246 +669,119 @@ footer strong{
         <a href="#request">درخواست</a>
         <a href="#contact">تماس با ما</a>
     </nav>
-
 </header>
 
-
-<!-- ================= HERO ================= -->
-
 <section class="hero" id="home">
-
     <div class="hero-content">
-
-        <h1>
-            شرکت ترانسپورتی باربری بین المللی نوروزی
-        </h1>
-
-        <h2>
-            دقت و سرعت در انتقال اموال تجارتی شما
-        </h2>
-
-        <p>
-            انتقال اموال تجارتی شما به تمام نقاط کشور
-            به طور صحیح و در اسرع وقت
-        </p>
+        <h1>شرکت ترانسپورتی باربری بین المللی نوروزی</h1>
+        <h2>دقت و سرعت در انتقال اموال تجارتی شما</h2>
+        <p>انتقال اموال تجارتی شما به تمام نقاط کشور به طور صحیح و در اسرع وقت</p>
 
         <div class="buttons">
-
-            <a class="btn btn-primary" href="#services">
-                مشاهده خدمات
-            </a>
-
-            <a
-                class="btn btn-whatsapp"
-                href="https://wa.me/93704861149"
-                target="_blank"
-                rel="noopener"
-            >
-                💬 تماس در واتساپ
-            </a>
-
+            <a class="btn btn-primary" href="#services">مشاهده خدمات</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/93779615141" target="_blank" rel="noopener">💬 تماس در واتساپ</a>
+            <a class="btn btn-telegram" href="https://t.me/93704861149" target="_blank" rel="noopener">💬 تماس در تلگرام</a>
         </div>
-
     </div>
-
 </section>
 
-
-<!-- ================= ABOUT ================= -->
-
 <section class="about" id="about">
-
     <div class="section-title">
-
         <h2>درباره شرکت نوروزی</h2>
-
         <span></span>
-
     </div>
 
     <div class="about-content">
-
         <p>
             شرکت ترانسپورتی بین المللی نوروزی با ارائه خدمات
             حمل و نقل داخلی و خارجی، آماده انتقال اموال تجارتی
             شما به تمام نقاط کشور و مسیرهای بین المللی می‌باشد.
         </p>
-
         <br>
-
-        <p>
-            دقت، سرعت و امنیت در انتقال کالا، اساس فعالیت ماست.
-        </p>
-
+        <p>دقت، سرعت و امنیت در انتقال کالا، اساس فعالیت ماست.</p>
     </div>
-
 </section>
 
-
-<!-- ================= SERVICES ================= -->
-
 <section id="services">
-
     <div class="section-title">
-
         <h2>خدمات ما</h2>
-
         <span></span>
-
     </div>
 
     <div class="services-grid">
-
         <div class="service">
             <div class="service-icon">🚛</div>
             <h3>حمل و نقل داخلی</h3>
-            <p>
-                انتقال اموال تجارتی به تمام نقاط افغانستان
-                با سرعت و امنیت بالا.
-            </p>
+            <p>انتقال اموال تجارتی به تمام نقاط افغانستان با سرعت و امنیت بالا.</p>
         </div>
 
         <div class="service">
             <div class="service-icon">🌍</div>
             <h3>ترانسپورت بین المللی</h3>
-            <p>
-                ارائه خدمات حمل و نقل بین المللی برای
-                انتقال کالاهای تجارتی.
-            </p>
+            <p>ارائه خدمات حمل و نقل بین المللی برای انتقال کالاهای تجارتی.</p>
         </div>
 
         <div class="service">
             <div class="service-icon">📦</div>
             <h3>انتقال کالا</h3>
-            <p>
-                انتقال صحیح و سریع انواع کالاهای تجارتی
-                به مقصد مورد نظر.
-            </p>
+            <p>انتقال صحیح و سریع انواع کالاهای تجارتی به مقصد مورد نظر.</p>
         </div>
 
         <div class="service">
             <div class="service-icon">🚢</div>
             <h3>خدمات حمل بار</h3>
-            <p>
-                هماهنگی و انتقال بار با وسایل نقلیه مناسب
-                برای انواع محموله‌ها.
-            </p>
+            <p>هماهنگی و انتقال بار با وسایل نقلیه مناسب برای انواع محموله‌ها.</p>
         </div>
 
         <div class="service">
             <div class="service-icon">❄️</div>
             <h3>حمل بار حساس</h3>
-            <p>
-                انتقال کالاهایی که نیازمند مراقبت و
-                شرایط ویژه هستند.
-            </p>
+            <p>انتقال کالاهایی که نیازمند مراقبت و شرایط ویژه هستند.</p>
         </div>
 
         <div class="service">
             <div class="service-icon">📋</div>
             <h3>ترخیص کالا</h3>
-            <p>
-                خدمات مربوط به ترخیص و هماهنگی امور
-                حمل و نقل کالا.
-            </p>
+            <p>خدمات مربوط به ترخیص و هماهنگی امور حمل و نقل کالا.</p>
         </div>
-
     </div>
-
 </section>
 
-
-<!-- ================= GALLERY ================= -->
-
 <section class="gallery" id="gallery">
-
     <div class="section-title">
-
         <h2>ناوگان ترانسپورتی ما</h2>
-
         <span></span>
-
     </div>
 
     <div class="gallery-grid">
-
         <div class="truck-card">
-
-            <img
-                src="https://spotinc.com/wp-content/uploads/2025/03/shutterstock_2513257961-1-1536x1024.jpg"
-                alt="کامیون ترانسپورتی"
-            >
-
+            <img src="https://spotinc.com/wp-content/uploads/2025/03/shutterstock_2513257961-1-1536x1024.jpg" alt="کامیون ترانسپورتی">
             <div class="truck-info">
-
-                <h3>
-                    خدمات ترخیص کالای تجارتی شما
-                </h3>
-
-                <p>
-                    به طور 24 ساعته
-                </p>
-
+                <h3>خدمات ترخیص کالای تجارتی شما</h3>
+                <p>به طور 24 ساعته</p>
             </div>
-
         </div>
 
-
         <div class="truck-card">
-
-            <img
-                src="https://cdn.prod.website-files.com/6633e3d3afa212fa48c40b96/6633e3d3afa212fa48c40bda_AdobeStock_579713116-p-2600.jpg"
-                alt="کامیون باربری"
-            >
-
+            <img src="https://cdn.prod.website-files.com/6633e3d3afa212fa48c40b96/6633e3d3afa212fa48c40bda_AdobeStock_579713116-p-2600.jpg" alt="کامیون باربری">
             <div class="truck-info">
-
-                <h3>
-                    حمل بار بین شهری
-                </h3>
-
-                <p>
-                    انتقال سریع و مطمئن محموله‌ها
-                </p>
-
+                <h3>حمل بار بین شهری</h3>
+                <p>انتقال سریع و مطمئن محموله‌ها</p>
             </div>
-
         </div>
 
-
         <div class="truck-card">
-
-            <img
-                src="https://fatiguescience.com/hubfs/road%20transportation%20operations.jpeg"
-                alt="کامیون حمل و نقل"
-            >
-
+            <img src="https://fatiguescience.com/hubfs/road%20transportation%20operations.jpeg" alt="کامیون حمل و نقل">
             <div class="truck-info">
-
-                <h3>
-                    انتقال اموال تجارتی شما به تمام نقاط کشور،
-                    ایران، پاکستان، چین و غیره
-                </h3>
-
-                <p>
-                    خدمات سرتاسری داخلی و خارجی و ترخیص کالا
-                </p>
-
+                <h3>انتقال اموال تجارتی شما به تمام نقاط کشور، ایران، پاکستان، چین و غیره</h3>
+                <p>خدمات سرتاسری داخلی و خارجی و ترخیص کالا</p>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- ================= NUMBERS ================= -->
-
 <section class="numbers">
-
     <div class="numbers-grid">
-
         <div class="number">
             <h3>30+</h3>
             <p>سال تجربه</p>
@@ -930,374 +801,133 @@ footer strong{
             <h3>24/7</h3>
             <p>پشتیبانی</p>
         </div>
-
     </div>
-
 </section>
 
-
-<!-- ================= REQUEST ================= -->
-
 <section class="request" id="request">
-
     <div class="section-title">
-
         <h2>درخواست اطلاعات و خدمات</h2>
-
         <span></span>
-
     </div>
 
     <div class="request-container">
-
         <p class="request-intro">
-            اگر به اطلاعات بیشتر، قیمت، هماهنگی حمل بار
-            یا خدمات ترانسپورتی نیاز دارید، مشخصات خود را
-            وارد کنید تا درخواست شما از طریق واتساپ برای
-            شرکت ارسال شود.
+            اگر به اطلاعات بیشتر، قیمت، هماهنگی حمل بار یا خدمات ترانسپورتی نیاز دارید، مشخصات خود را وارد کنید تا درخواست شما از طریق واتساپ برای شرکت ارسال شود.
         </p>
 
-
-        <form
-            class="request-form"
-            onsubmit="sendToWhatsApp(event)"
-        >
-
+        <form class="request-form" onsubmit="sendToWhatsApp(event)">
             <div class="form-group">
-
-                <label for="name">
-                    نام و نام خانوادگی
-                </label>
-
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="نام خود را وارد کنید"
-                    required
-                >
-
+                <label for="name">نام و نام خانوادگی</label>
+                <input type="text" id="name" placeholder="نام خود را وارد کنید" required>
             </div>
 
-
             <div class="form-group">
-
-                <label for="phone">
-                    شماره تماس
-                </label>
-
-                <input
-                    type="tel"
-                    id="phone"
-                    placeholder="مثلاً 0700000000"
-                    required
-                >
-
+                <label for="phone">شماره تماس</label>
+                <input type="tel" id="phone" placeholder="مثلاً 0700000000" required>
             </div>
 
-
             <div class="form-group">
-
-                <label for="service">
-                    نوع درخواست
-                </label>
-
+                <label for="service">نوع درخواست</label>
                 <select id="service" required>
-
-                    <option value="">
-                        انتخاب کنید
-                    </option>
-
-                    <option value="حمل و نقل داخلی">
-                        حمل و نقل داخلی
-                    </option>
-
-                    <option value="ترانسپورت بین المللی">
-                        ترانسپورت بین المللی
-                    </option>
-
-                    <option value="انتقال کالا">
-                        انتقال کالا
-                    </option>
-
-                    <option value="ترخیص کالا">
-                        ترخیص کالا
-                    </option>
-
-                    <option value="استعلام قیمت">
-                        استعلام قیمت
-                    </option>
-
-                    <option value="درخواست اطلاعات بیشتر">
-                        درخواست اطلاعات بیشتر
-                    </option>
-
-                    <option value="سایر">
-                        سایر
-                    </option>
-
+                    <option value="">انتخاب کنید</option>
+                    <option value="حمل و نقل داخلی">حمل و نقل داخلی</option>
+                    <option value="ترانسپورت بین المللی">ترانسپورت بین المللی</option>
+                    <option value="انتقال کالا">انتقال کالا</option>
+                    <option value="ترخیص کالا">ترخیص کالا</option>
+                    <option value="استعلام قیمت">استعلام قیمت</option>
+                    <option value="درخواست اطلاعات بیشتر">درخواست اطلاعات بیشتر</option>
+                    <option value="سایر">سایر</option>
                 </select>
-
             </div>
-
 
             <div class="form-group">
-
-                <label for="destination">
-                    مقصد / مسیر
-                </label>
-
-                <input
-                    type="text"
-                    id="destination"
-                    placeholder="مثلاً هرات - اسلام قلعه"
-                >
-
+                <label for="destination">مقصد / مسیر</label>
+                <input type="text" id="destination" placeholder="مثلاً هرات - اسلام قلعه">
             </div>
-
 
             <div class="form-group full">
-
-                <label for="description">
-                    توضیحات درخواست
-                </label>
-
-                <textarea
-                    id="description"
-                    placeholder="لطفاً درخواست یا توضیحات خود را کامل بنویسید..."
-                    required
-                ></textarea>
-
+                <label for="description">توضیحات درخواست</label>
+                <textarea id="description" placeholder="لطفاً درخواست یا توضیحات خود را کامل بنویسید..." required></textarea>
             </div>
 
-
-            <button
-                type="submit"
-                class="submit-request"
-            >
-                💬 ارسال درخواست از طریق واتساپ
-            </button>
-
+            <button type="submit" class="submit-request">💬 ارسال درخواست از طریق واتساپ</button>
         </form>
-
     </div>
-
 </section>
-
-
-<!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
-
     <div class="section-title">
-
         <h2>تماس و آدرس شرکت</h2>
-
         <span></span>
-
     </div>
-
 
     <div class="contact-grid">
-
-
-        <!-- شماره ها -->
-
         <div class="contact-box">
-
-            <h3>
-                📞 شماره‌های تماس
-            </h3>
-
+            <h3>📞 شماره‌های تماس</h3>
             <div class="phone-list">
-
                 <div class="phone-item">
-
-                    <span class="phone-label">
-                        شماره تماس ۱
-                    </span>
-
-                    <a
-                        class="phone-number"
-                        href="tel:0795190285"
-                    >
-                        0795190285
-                    </a>
-
+                    <span class="phone-label">غلام قادر نوری</span>
+                    <a class="phone-number" href="tel:0795190285">0795190285</a>
                 </div>
 
-
                 <div class="phone-item">
-
-                    <span class="phone-label">
-                        شماره تماس ۲
-                    </span>
-
-                    <a
-                        class="phone-number"
-                        href="tel:0779615141"
-                    >
-                        0779615141
-                    </a>
-
+                    <span class="phone-label">احمد تواب نوروزی</span>
+                    <a class="phone-number" href="tel:0779615141">0779615141</a>
                 </div>
 
-
                 <div class="phone-item">
-
-                    <span class="phone-label">
-                        شماره تماس ۳
-                    </span>
-
-                    <a
-                        class="phone-number"
-                        href="tel:0794241052"
-                    >
-                        0794241052
-                    </a>
-
+                    <span class="phone-label">احمد تواب نوروزی</span>
+                    <a class="phone-number" href="tel:0704861149">0704861149</a>
                 </div>
 
-
                 <div class="phone-item">
-
-                    <span class="phone-label">
-                        شماره تماس ۴
-                    </span>
-
-                    <a
-                        class="phone-number"
-                        href="tel:0704861149"
-                    >
-                        0704861149
-                    </a>
-
+                    <span class="phone-label">شماره تماس آقاصاحب</span>
+                    <a class="phone-number" href="tel:0794241052">0794241052</a>
                 </div>
-
             </div>
-
         </div>
-
-
-        <!-- آدرس -->
 
         <div class="contact-box">
-
-            <h3>
-                📍 آدرس شرکت
-            </h3>
-
+            <h3>📍 آدرس شرکت</h3>
             <div class="address-text">
-
-                <p class="address-line">
-                    <strong>شهر:</strong>
-                    هرات
-                </p>
-
-                <p class="address-line">
-                    <strong>موقعیت:</strong>
-                    سرک عمومی اسلام‌قلعه
-                </p>
-
-                <p class="address-line">
-                    <strong>نشانی:</strong>
-                    مقابل ترمینال باربری،
-                    کوچه سید مختار،
-                    دکان ۶
-                </p>
-
-                <p class="address-line">
-                    <strong>شعبه کمیسیون:</strong>
-                    دکان نمبر ۱۸
-                </p>
-
+                <p class="address-line"><strong>شهر:</strong> هرات</p>
+                <p class="address-line"><strong>موقعیت:</strong> سرک عمومی اسلام‌قلعه</p>
+                <p class="address-line"><strong>نشانی:</strong> مقابل ترمینال باربری، کوچه سید مختار، دکان نمبر ۶</p>
+                <p class="address-line"><strong>شعبه کمیسیون:</strong> دکان نمبر ۱۸</p>
             </div>
-
         </div>
-
-
-        <!-- MAP -->
 
         <div class="map-box">
-
-            <h3>
-                🗺️ موقعیت شرکت روی نقشه
-            </h3>
-
+            <h3>🗺️ موقعیت شرکت روی نقشه</h3>
             <div class="map-preview">
-
-                <iframe
-                    src="https://www.google.com/maps?q=Herat%20Islam%20Qala&output=embed"
-                    loading="lazy"
-                    allowfullscreen
-                ></iframe>
-
+                <iframe src="https://www.google.com/maps?q=Herat%20Islam%20Qala&output=embed" loading="lazy" allowfullscreen></iframe>
             </div>
-
             <div class="map-actions">
-
-                <a
-                    class="map-link"
-                    href="https://maps.app.goo.gl/XY5fRtrkTeNLmcCS7"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    📍 باز کردن موقعیت دقیق در Google Maps
-                </a>
-
+                <a class="map-link" href="https://maps.app.goo.gl/XY5fRtrkTeNLmcCS7" target="_blank" rel="noopener">📍 باز کردن موقعیت دقیق در Google Maps</a>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- ================= FOOTER ================= -->
-
 <footer>
-
     <p>
-
         © 2026
-
-        <strong>
-            شرکت ترانسپورتی بین المللی نوروزی
-        </strong>
-
+        <strong>شرکت ترانسپورتی بین المللی نوروزی</strong>
         - تمامی حقوق این سایت محفوظ است.
-
     </p>
-
 </footer>
 
-
-<!-- ================= WHATSAPP SCRIPT ================= -->
-
 <script>
-
 function sendToWhatsApp(event){
-
     event.preventDefault();
 
-    const name =
-        document.getElementById("name").value.trim();
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const destination = document.getElementById("destination").value.trim();
+    const description = document.getElementById("description").value.trim();
 
-    const phone =
-        document.getElementById("phone").value.trim();
-
-    const service =
-        document.getElementById("service").value;
-
-    const destination =
-        document.getElementById("destination").value.trim();
-
-    const description =
-        document.getElementById("description").value.trim();
-
-
-    const message =
-`سلام، از طریق وب‌سایت شرکت ترانسپورتی بین المللی نوروزی درخواست دارم.
+    const message = `سلام، از طریق وب‌سایت شرکت ترانسپورتی بین المللی نوروزی درخواست دارم.
 
 👤 نام و نام خانوادگی:
 ${name}
@@ -1316,25 +946,12 @@ ${description}
 
 لطفاً درخواست من را بررسی کرده و در صورت امکان اطلاعات و قیمت را ارسال نمایید.`;
 
-    
     const whatsappNumber = "93704861149";
+    const whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
 
-    const whatsappURL =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        encodeURIComponent(message);
-
-
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
-
+    window.open(whatsappURL, "_blank");
 }
-
 </script>
-
 
 </body>
 </html>
