@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -34,34 +33,35 @@ body{
 
 .settings-wrapper{
     position:fixed;
-    top:18px;
-    right:18px;
+    top:15px;
+    right:15px;
     z-index:9999;
 }
 
 .settings-button{
-    width:48px;
-    height:48px;
+    width:40px;
+    height:40px;
     border:none;
-    border-radius:12px;
+    border-radius:10px;
     background:#f5b72f;
     color:#071b35;
-    font-size:27px;
+    font-size:22px;
     cursor:pointer;
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
     transition:.3s;
 }
 
 .settings-button:hover{
-    transform:scale(1.08);
+    transform:scale(1.06);
+    background:#ffd568;
 }
 
 .settings-menu{
     position:absolute;
-    top:58px;
+    top:50px;
     right:0;
     width:270px;
     background:white;
@@ -123,7 +123,7 @@ body{
     border:1px solid #ddd;
     border-radius:8px;
     outline:none;
-    font-family:Tahoma,Arial,sans-serif;
+    font-family:"Segoe UI Emoji","Noto Color Emoji",Tahoma,Arial,sans-serif;
     background:#f5f7fa;
     cursor:pointer;
 }
@@ -220,7 +220,9 @@ header{
     top:0;
     z-index:1000;
     box-shadow:0 3px 15px rgba(0,0,0,.25);
-    padding-right:85px;
+
+    /* فضای دکمه تنظیمات */
+    padding-right:70px;
 }
 
 .logo{
@@ -234,18 +236,48 @@ nav{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
+    align-items:center;
 }
 
 nav a{
+    position:relative;
     color:white;
     text-decoration:none;
     margin:0 10px;
+    padding:5px 2px 8px;
     font-family:"B Titr",Tahoma,sans-serif;
-    transition:.3s;
+    transition:color .3s;
+}
+
+/* خط زیر گزینه منو */
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    margin:auto;
+    background:#f5b72f;
+    border-radius:5px;
+    transition:width .3s ease;
 }
 
 nav a:hover{
     color:#f5b72f;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ================= SECTIONS SCROLL ================= */
+
+section{
+    padding:80px 7%;
+    scroll-margin-top:90px;
 }
 
 /* ================= HERO ================= */
@@ -354,10 +386,6 @@ nav a:hover{
 }
 
 /* ================= GENERAL ================= */
-
-section{
-    padding:80px 7%;
-}
 
 .section-title{
     text-align:center;
@@ -480,31 +508,6 @@ section{
     font-size:18px;
 }
 
-/* ================= NUMBERS ================= */
-
-.numbers{
-    background:#071b35;
-    color:white;
-}
-
-.numbers-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    text-align:center;
-}
-
-.number h3{
-    color:#f5b72f;
-    font-family:Arial,sans-serif;
-    font-size:42px;
-}
-
-.number p{
-    font-family:"Noto Nastaliq Urdu",serif;
-    font-size:19px;
-}
-
 /* ================= REQUEST ================= */
 
 .request{
@@ -592,6 +595,31 @@ section{
 .submit-request:hover{
     background:#16a958;
     transform:translateY(-2px);
+}
+
+/* ================= NUMBERS ================= */
+
+.numbers{
+    background:#071b35;
+    color:white;
+}
+
+.numbers-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.number h3{
+    color:#f5b72f;
+    font-family:Arial,sans-serif;
+    font-size:42px;
+}
+
+.number p{
+    font-family:"Noto Nastaliq Urdu",serif;
+    font-size:19px;
 }
 
 /* ================= CONTACT ================= */
@@ -818,17 +846,19 @@ footer strong{
     }
 
     .settings-button{
-        width:44px;
-        height:44px;
-        font-size:24px;
+        width:38px;
+        height:38px;
+        font-size:21px;
+        border-radius:9px;
     }
 
     .settings-menu{
         width:245px;
+        top:48px;
     }
 
     header{
-        padding-right:70px;
+        padding-right:62px;
     }
 
     section{
@@ -858,6 +888,26 @@ footer strong{
     .map-preview iframe{
         height:280px;
     }
+
+    nav a{
+        padding-bottom:7px;
+    }
+
+}
+
+/* ================= LTR SUPPORT ================= */
+
+html[dir="ltr"] .settings-menu{
+    right:0;
+    left:auto;
+}
+
+html[dir="ltr"] .setting-button-option{
+    text-align:left;
+}
+
+html[dir="ltr"] nav{
+    direction:ltr;
 }
 
 </style>
@@ -870,9 +920,11 @@ footer strong{
 <div class="settings-wrapper">
 
     <button
+        type="button"
         class="settings-button"
         onclick="toggleSettings()"
         aria-label="Settings"
+        aria-expanded="false"
     >
         ☰
     </button>
@@ -893,6 +945,7 @@ footer strong{
             </span>
 
             <button
+                type="button"
                 class="setting-button-option"
                 onclick="toggleDarkMode()"
                 id="themeButton"
@@ -1206,36 +1259,6 @@ footer strong{
 
 </section>
 
-<!-- ================= NUMBERS ================= -->
-
-<section class="numbers">
-
-<div class="numbers-grid">
-
-    <div class="number">
-        <h3>30+</h3>
-        <p data-i18n="years">سال تجربه</p>
-    </div>
-
-    <div class="number">
-        <h3>1000000+</h3>
-        <p data-i18n="shipments">محموله انتقال داده شده</p>
-    </div>
-
-    <div class="number">
-        <h3>34+</h3>
-        <p data-i18n="routes">مسیر حمل و نقل</p>
-    </div>
-
-    <div class="number">
-        <h3>24/7</h3>
-        <p data-i18n="support">پشتیبانی</p>
-    </div>
-
-</div>
-
-</section>
-
 <!-- ================= REQUEST ================= -->
 
 <section class="request" id="request">
@@ -1384,6 +1407,36 @@ footer strong{
 
 </section>
 
+<!-- ================= NUMBERS ================= -->
+
+<section class="numbers">
+
+<div class="numbers-grid">
+
+    <div class="number">
+        <h3>30+</h3>
+        <p data-i18n="years">سال تجربه</p>
+    </div>
+
+    <div class="number">
+        <h3>1000000+</h3>
+        <p data-i18n="shipments">محموله انتقال داده شده</p>
+    </div>
+
+    <div class="number">
+        <h3>34+</h3>
+        <p data-i18n="routes">مسیر حمل و نقل</p>
+    </div>
+
+    <div class="number">
+        <h3>24/7</h3>
+        <p data-i18n="support">پشتیبانی</p>
+    </div>
+
+</div>
+
+</section>
+
 <!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
@@ -1430,6 +1483,7 @@ footer strong{
             </div>
 
             <div class="phone-item">
+
                 <span class="phone-label" data-i18n="ownerNumber">
                     شماره تماس آقاصاحب
                 </span>
@@ -1437,6 +1491,7 @@ footer strong{
                 <a class="phone-number" href="tel:0794241052">
                     0794241052
                 </a>
+
             </div>
 
         </div>
@@ -1536,7 +1591,6 @@ footer strong{
 </p>
 
 </footer>
-
 
 <script>
 
@@ -2102,9 +2156,14 @@ zh:{
 function toggleSettings(){
 
     const menu = document.getElementById("settingsMenu");
+    const button = document.querySelector(".settings-button");
 
-    menu.classList.toggle("active");
+    const isActive = menu.classList.toggle("active");
 
+    button.setAttribute(
+        "aria-expanded",
+        isActive ? "true" : "false"
+    );
 }
 
 
@@ -2116,27 +2175,32 @@ function toggleDarkMode(){
 
     document.body.classList.toggle("dark-mode");
 
-    const dark = document.body.classList.contains("dark-mode");
+    const dark =
+        document.body.classList.contains("dark-mode");
 
-    localStorage.setItem("nawrooziDarkMode", dark ? "1" : "0");
+    localStorage.setItem(
+        "nawrooziDarkMode",
+        dark ? "1" : "0"
+    );
 
     updateThemeButton();
-
 }
 
 
 function updateThemeButton(){
 
-    const button = document.getElementById("themeButton");
+    const button =
+        document.getElementById("themeButton");
 
     if(!button) return;
 
-    const lang = localStorage.getItem("nawrooziLanguage") || "fa";
+    const lang =
+        localStorage.getItem("nawrooziLanguage") || "fa";
 
-    button.innerHTML = document.body.classList.contains("dark-mode")
+    button.innerHTML =
+        document.body.classList.contains("dark-mode")
         ? translations[lang].lightMode
         : translations[lang].darkMode;
-
 }
 
 
@@ -2150,7 +2214,10 @@ function changeLanguage(lang){
         lang = "fa";
     }
 
-    localStorage.setItem("nawrooziLanguage", lang);
+    localStorage.setItem(
+        "nawrooziLanguage",
+        lang
+    );
 
     const t = translations[lang];
 
@@ -2164,7 +2231,8 @@ function changeLanguage(lang){
 
     document.querySelectorAll("[data-i18n]").forEach(element => {
 
-        const key = element.getAttribute("data-i18n");
+        const key =
+            element.getAttribute("data-i18n");
 
         if(t[key]){
             element.innerHTML = t[key];
@@ -2175,7 +2243,8 @@ function changeLanguage(lang){
 
     document.querySelectorAll("[data-placeholder]").forEach(element => {
 
-        const key = element.getAttribute("data-placeholder");
+        const key =
+            element.getAttribute("data-placeholder");
 
         if(t[key]){
             element.placeholder = t[key];
@@ -2189,7 +2258,6 @@ function changeLanguage(lang){
     updateThemeButton();
 
     updateSelectDirection(lang);
-
 }
 
 
@@ -2199,7 +2267,8 @@ function changeLanguage(lang){
 
 function updateSelectDirection(lang){
 
-    const select = document.getElementById("languageSelect");
+    const select =
+        document.getElementById("languageSelect");
 
     if(!select) return;
 
@@ -2208,7 +2277,6 @@ function updateSelectDirection(lang){
     }else{
         select.style.direction = "ltr";
     }
-
 }
 
 
@@ -2333,7 +2401,6 @@ ${description}`;
         whatsappURL,
         "_blank"
     );
-
 }
 
 
@@ -2341,56 +2408,85 @@ ${description}`;
    LOAD SAVED SETTINGS
 ===================================================== */
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
 
-    const savedLanguage =
-        localStorage.getItem("nawrooziLanguage") || "fa";
+        const savedLanguage =
+            localStorage.getItem(
+                "nawrooziLanguage"
+            ) || "fa";
 
-    const savedDarkMode =
-        localStorage.getItem("nawrooziDarkMode");
+        const savedDarkMode =
+            localStorage.getItem(
+                "nawrooziDarkMode"
+            );
 
 
-    if(savedDarkMode === "1"){
-        document.body.classList.add("dark-mode");
+        if(savedDarkMode === "1"){
+            document.body.classList.add(
+                "dark-mode"
+            );
+        }
+
+
+        const languageSelect =
+            document.getElementById(
+                "languageSelect"
+            );
+
+        if(languageSelect){
+            languageSelect.value =
+                savedLanguage;
+        }
+
+
+        changeLanguage(savedLanguage);
+
     }
-
-
-    const languageSelect =
-        document.getElementById("languageSelect");
-
-    if(languageSelect){
-        languageSelect.value = savedLanguage;
-    }
-
-
-    changeLanguage(savedLanguage);
-
-});
+);
 
 
 /* =====================================================
    CLOSE SETTINGS WHEN CLICKING OUTSIDE
 ===================================================== */
 
-document.addEventListener("click", function(event){
+document.addEventListener(
+    "click",
+    function(event){
 
-    const wrapper =
-        document.querySelector(".settings-wrapper");
+        const wrapper =
+            document.querySelector(
+                ".settings-wrapper"
+            );
 
-    const menu =
-        document.getElementById("settingsMenu");
+        const menu =
+            document.getElementById(
+                "settingsMenu"
+            );
 
-    if(
-        wrapper &&
-        !wrapper.contains(event.target)
-    ){
-        menu.classList.remove("active");
+        const button =
+            document.querySelector(
+                ".settings-button"
+            );
+
+        if(
+            wrapper &&
+            !wrapper.contains(event.target)
+        ){
+
+            menu.classList.remove("active");
+
+            button.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        }
+
     }
-
-});
+);
 
 </script>
 
 </body>
 </html>
-```
