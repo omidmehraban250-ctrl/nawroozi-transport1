@@ -553,6 +553,310 @@ footer strong{
     font-family:"B Titr",Tahoma,sans-serif;
 }
 
+
+/* ================= SETTINGS MENU ================= */
+
+.settings-wrap{
+    position:relative;
+    margin-right:auto;
+    margin-left:18px;
+    z-index:1100;
+}
+
+.settings-btn{
+    width:46px;
+    height:46px;
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:12px;
+    background:rgba(255,255,255,.08);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.settings-btn span{
+    width:22px;
+    height:2px;
+    border-radius:5px;
+    background:#fff;
+    transition:.3s;
+}
+
+.settings-btn:hover{
+    background:#f5b72f;
+    border-color:#f5b72f;
+}
+
+.settings-btn:hover span{
+    background:#071b35;
+}
+
+.settings-panel{
+    position:absolute;
+    top:58px;
+    right:0;
+    width:285px;
+    padding:18px;
+    background:#fff;
+    color:#222;
+    border-radius:16px;
+    box-shadow:0 15px 45px rgba(0,0,0,.25);
+    border:1px solid #e4e8ee;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-8px) scale(.98);
+    transition:.25s ease;
+}
+
+.settings-panel.open{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0) scale(1);
+}
+
+.settings-title{
+    font-family:"B Titr",Tahoma,sans-serif;
+    color:#071b35;
+    font-size:21px;
+    padding-bottom:12px;
+    margin-bottom:8px;
+    border-bottom:2px solid #f5b72f;
+}
+
+.setting-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:15px 0;
+    border-bottom:1px solid #edf0f4;
+}
+
+.setting-row:last-child{
+    border-bottom:0;
+    padding-bottom:3px;
+}
+
+.setting-row strong{
+    display:block;
+    color:#071b35;
+    font-family:"B Titr",Tahoma,sans-serif;
+    font-size:16px;
+}
+
+.setting-row small{
+    display:block;
+    color:#777;
+    font-family:Tahoma,Arial,sans-serif;
+    font-size:12px;
+    margin-top:3px;
+}
+
+.toggle-btn{
+    width:52px;
+    height:30px;
+    border:0;
+    border-radius:30px;
+    background:#dce2e9;
+    cursor:pointer;
+    position:relative;
+    transition:.3s;
+    flex-shrink:0;
+}
+
+.toggle-btn::before{
+    content:"";
+    position:absolute;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:#fff;
+    top:3px;
+    right:3px;
+    box-shadow:0 2px 6px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.toggle-btn .toggle-icon{
+    position:absolute;
+    left:7px;
+    top:4px;
+    font-size:14px;
+    line-height:22px;
+    opacity:.75;
+}
+
+body.dark-mode .toggle-btn{
+    background:#f5b72f;
+}
+
+body.dark-mode .toggle-btn::before{
+    right:25px;
+}
+
+.language-row select{
+    min-width:105px;
+    padding:8px 10px;
+    border:1px solid #d7dde5;
+    border-radius:8px;
+    background:#f8fafc;
+    color:#071b35;
+    outline:none;
+    cursor:pointer;
+    font-family:Tahoma,Arial,sans-serif;
+}
+
+/* ================= DARK MODE ================= */
+
+body,
+header,
+section,
+.service,
+.truck-card,
+.request-container,
+.contact-box,
+.map-box,
+.settings-panel,
+.form-group input,
+.form-group select,
+.form-group textarea{
+    transition:background-color .35s ease,color .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+
+body.dark-mode{
+    background:#0d1117;
+    color:#e9edf2;
+}
+
+body.dark-mode .about,
+body.dark-mode .request,
+body.dark-mode .service,
+body.dark-mode .truck-card,
+body.dark-mode .contact-box,
+body.dark-mode .map-box,
+body.dark-mode .settings-panel{
+    background:#161b22;
+    color:#e9edf2;
+}
+
+body.dark-mode .gallery,
+body.dark-mode .contact{
+    background:#11161d;
+}
+
+body.dark-mode .request-container{
+    background:#11161d;
+}
+
+body.dark-mode .section-title h2,
+body.dark-mode .service h3,
+body.dark-mode .truck-info h3,
+body.dark-mode .contact-box h3,
+body.dark-mode .form-group label,
+body.dark-mode .settings-title,
+body.dark-mode .setting-row strong{
+    color:#f5b72f;
+}
+
+body.dark-mode .about-content,
+body.dark-mode .service p,
+body.dark-mode .truck-info p,
+body.dark-mode .address-text{
+    color:#e9edf2;
+}
+
+body.dark-mode .request-intro,
+body.dark-mode .phone-label,
+body.dark-mode .setting-row small{
+    color:#b9c1cc;
+}
+
+body.dark-mode .phone-item{
+    background:#0d1117;
+}
+
+body.dark-mode .phone-number{
+    color:#f5b72f;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea{
+    background:#0d1117;
+    color:#fff;
+    border-color:#303846;
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder{
+    color:#8993a2;
+}
+
+body.dark-mode .language-row select{
+    background:#0d1117;
+    color:#fff;
+    border-color:#303846;
+}
+
+body.dark-mode .setting-row{
+    border-color:#303846;
+}
+
+/* زبان‌های چپ به راست */
+html[dir="ltr"] body{
+    direction:ltr;
+}
+
+html[dir="ltr"] .hero,
+html[dir="ltr"] .section-title,
+html[dir="ltr"] .about-content{
+    text-align:center;
+}
+
+html[dir="ltr"] .settings-panel{
+    right:0;
+    left:auto;
+}
+
+html[dir="ltr"] .settings-wrap{
+    margin-left:18px;
+    margin-right:auto;
+}
+
+@media(max-width:900px){
+    .settings-wrap{
+        position:absolute;
+        top:15px;
+        right:7%;
+        margin:0;
+    }
+
+    .settings-panel{
+        right:0;
+        width:280px;
+    }
+
+    header{
+        padding-top:72px;
+    }
+}
+
+@media(max-width:500px){
+    .settings-panel{
+        width:calc(100vw - 30px);
+        right:-5px;
+    }
+
+    .settings-btn{
+        width:43px;
+        height:43px;
+    }
+}
+
 /* ================= MOBILE ================= */
 
 @media(max-width:900px){
@@ -669,17 +973,49 @@ footer strong{
 
 <header>
 
+    <div class="settings-wrap">
+        <button class="settings-btn" id="settingsBtn" type="button" aria-label="تنظیمات" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="settings-panel" id="settingsPanel">
+            <div class="settings-title" data-i18n="settingsTitle">تنظیمات سایت</div>
+
+            <div class="setting-row">
+                <div>
+                    <strong data-i18n="themeTitle">حالت نمایش</strong>
+                    <small data-i18n="themeDesc">روشن / تاریک</small>
+                </div>
+                <button class="toggle-btn" id="themeToggle" type="button" aria-label="تغییر حالت نمایش">
+                    <span class="toggle-icon">☾</span>
+                </button>
+            </div>
+
+            <div class="setting-row language-row">
+                <div>
+                    <strong data-i18n="languageTitle">زبان سایت</strong>
+                    <small data-i18n="languageDesc">انتخاب زبان</small>
+                </div>
+                <select id="languageSelect" aria-label="زبان سایت">
+                    <option value="fa">فارسی</option>
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
     <div class="logo">
         نوروزی ترانسپورت
     </div>
 
     <nav>
-        <a href="#home">خانه</a>
-        <a href="#about">درباره ما</a>
-        <a href="#services">خدمات</a>
-        <a href="#gallery">ناوگان ما</a>
-        <a href="#request">درخواست</a>
-        <a href="#contact">تماس با ما</a>
+        <a href="#home" data-i18n="navHome">خانه</a>
+        <a href="#about" data-i18n="navAbout">درباره ما</a>
+        <a href="#services" data-i18n="navServices">خدمات</a>
+        <a href="#gallery" data-i18n="navFleet">ناوگان ما</a>
+        <a href="#request" data-i18n="navRequest">درخواست</a>
+        <a href="#contact" data-i18n="navContact">تماس با ما</a>
     </nav>
 
 </header>
@@ -690,18 +1026,13 @@ footer strong{
 
     <div class="hero-content">
 
-        <h1>
-            شرکت ترانسپورتی باربری بین المللی نوروزی
-        </h1>
+        <h1 data-i18n="heroTitle">شرکت ترانسپورتی ��اربری بین المللی نوروزی</h1>
 
         <h2>
-            د��ت و سرعت در انتقال اموال تجارتی شما
+            دقت و سرعت در انتقال اموال تجارتی شما
         </h2>
 
-        <p>
-            انتقال اموال تجارتی شما به تمام نقاط کشور
-            به طور صحیح و در اسرع وقت
-        </p>
+        <p data-i18n="heroText">انتقال اموال تجارتی شما به تمام نقاط کشور به طور صحیح و در اسرع وقت</p>
 
         <div class="buttons">
 
@@ -748,7 +1079,7 @@ footer strong{
 
     <div class="section-title">
 
-        <h2>درباره شرکت نوروزی</h2>
+        <h2 data-i18n="aboutTitle">درباره شرکت نوروزی</h2>
 
         <span></span>
 
@@ -778,7 +1109,7 @@ footer strong{
 
     <div class="section-title">
 
-        <h2>خدمات ما</h2>
+        <h2 data-i18n="servicesTitle">خدمات ما</h2>
 
         <span></span>
 
@@ -788,7 +1119,7 @@ footer strong{
 
         <div class="service">
             <div class="service-icon">🚛</div>
-            <h3>حمل و نقل داخلی</h3>
+            <h3 data-i18n="service1Title">حمل و نقل داخلی</h3>
             <p>
                 انتقال اموال تجارتی به تمام نقاط افغانستان
                 با سرعت و امنیت بالا.
@@ -797,7 +1128,7 @@ footer strong{
 
         <div class="service">
             <div class="service-icon">🌍</div>
-            <h3>ترانسپورت بین المللی</h3>
+            <h3 data-i18n="service2Title">ترانسپورت بین المللی</h3>
             <p>
                 ارائه خدمات حمل و نقل بین المللی برای
                 انتقال کالاهای تجارتی.
@@ -806,7 +1137,7 @@ footer strong{
 
         <div class="service">
             <div class="service-icon">📦</div>
-            <h3>انتقال کالا</h3>
+            <h3 data-i18n="service3Title">انتقال کالا</h3>
             <p>
                 انتقال صحیح و سریع انواع کالاهای تجارتی
                 به مقصد مورد نظر.
@@ -815,7 +1146,7 @@ footer strong{
 
         <div class="service">
             <div class="service-icon">🚢</div>
-            <h3>خدمات حمل بار</h3>
+            <h3 data-i18n="service4Title">خدمات حمل بار</h3>
             <p>
                 هماهنگی و انتقال بار با وسایل نقلیه مناسب
                 برای انواع محموله‌ها.
@@ -824,7 +1155,7 @@ footer strong{
 
         <div class="service">
             <div class="service-icon">❄️</div>
-            <h3>حمل بار حساس</h3>
+            <h3 data-i18n="service5Title">حمل بار حساس</h3>
             <p>
                 انتقال کالاهایی که نیازمند مراقبت و
                 شرایط ویژه هستند.
@@ -833,7 +1164,7 @@ footer strong{
 
         <div class="service">
             <div class="service-icon">📋</div>
-            <h3>ترخیص کالا</h3>
+            <h3 data-i18n="service6Title">ترخیص کالا</h3>
             <p>
                 خدمات مربوط به ترخیص و هماهنگی امور
                 حمل و نقل کالا.
@@ -850,7 +1181,7 @@ footer strong{
 
     <div class="section-title">
 
-        <h2>ناوگان ترانسپورتی ما</h2>
+        <h2 data-i18n="fleetTitle">ناوگان ترانسپورتی ما</h2>
 
         <span></span>
 
@@ -883,7 +1214,7 @@ footer strong{
 
             <img
                 src="https://cdn.prod.website-files.com/6633e3d3afa212fa48c40b96/6633e3d3afa212fa48c40bda_AdobeStock_579713116-p-2600.jpg"
-                alt="کام��ون باربری"
+                alt="کامیون باربری"
             >
 
             <div class="truck-info">
@@ -934,22 +1265,22 @@ footer strong{
 
         <div class="number">
             <h3>30+</h3>
-            <p>سال تجربه</p>
+            <p data-i18n="stat1">سال تجربه</p>
         </div>
 
         <div class="number">
             <h3>1000000+</h3>
-            <p>محموله انتقال داده شده</p>
+            <p data-i18n="stat2">محموله انتقال داده شده</p>
         </div>
 
         <div class="number">
             <h3>34+</h3>
-            <p>مسیر حمل و نقل</p>
+            <p data-i18n="stat3">مسیر حمل و نقل</p>
         </div>
 
         <div class="number">
             <h3>24/7</h3>
-            <p>پشتیبانی</p>
+            <p data-i18n="stat4">پشتیبانی</p>
         </div>
 
     </div>
@@ -962,7 +1293,7 @@ footer strong{
 
     <div class="section-title">
 
-        <h2>درخواست اطلاعات و خدمات</h2>
+        <h2 data-i18n="requestTitle">درخواست اطلاعات و خدمات</h2>
 
         <span></span>
 
@@ -984,7 +1315,7 @@ footer strong{
 
             <div class="form-group">
 
-                <label for="name">
+                <label for="name" data-i18n="nameLabel">
                     نام و نام خانوادگی
                 </label>
 
@@ -999,7 +1330,7 @@ footer strong{
 
             <div class="form-group">
 
-                <label for="phone">
+                <label for="phone" data-i18n="phoneLabel">
                     شماره تماس
                 </label>
 
@@ -1014,7 +1345,7 @@ footer strong{
 
             <div class="form-group">
 
-                <label for="service">
+                <label for="service" data-i18n="serviceLabel">
                     نوع درخواست
                 </label>
 
@@ -1058,7 +1389,7 @@ footer strong{
 
             <div class="form-group">
 
-                <label for="destination">
+                <label for="destination" data-i18n="destinationLabel">
                     مقصد / مسیر
                 </label>
 
@@ -1072,7 +1403,7 @@ footer strong{
 
             <div class="form-group full">
 
-                <label for="description">
+                <label for="description" data-i18n="descriptionLabel">
                     توضیحات درخواست
                 </label>
 
@@ -1103,7 +1434,7 @@ footer strong{
 
     <div class="section-title">
 
-        <h2>تماس و آدرس شرکت</h2>
+        <h2 data-i18n="contactTitle">تماس و آدرس شرکت</h2>
 
         <span></span>
 
@@ -1284,7 +1615,7 @@ function sendToWhatsApp(event){
     const destination = document.getElementById("destination").value.trim();
     const description = document.getElementById("description").value.trim();
 
-    const message = `سلام، از طریق وب‌سایت شرکت ترانسپورتی بین المللی نوروزی درخواست دارم.
+    const message = `سلام، از طریق وب‌سایت شرکت ترانسپورتی بین المللی نوروزی درخو��ست دارم.
 
 👤 نام و نام خانوادگی:
 ${name}
@@ -1311,6 +1642,131 @@ ${description}
 
 }
 
+</script>
+
+
+<script>
+/* ================= SETTINGS + LANGUAGE SYSTEM ================= */
+
+const translations = {
+    fa: {
+        settingsTitle:"تنظیمات سایت", themeTitle:"حالت نمایش", themeDesc:"روشن / تاریک",
+        languageTitle:"زبان سایت", languageDesc:"انتخاب زبان",
+        navHome:"خانه", navAbout:"درباره ما", navServices:"خدمات", navFleet:"ناوگان ما",
+        navRequest:"درخواست", navContact:"تماس با ما",
+        heroTitle:"شرکت ترانسپورتی باربری بین المللی نوروزی",
+        heroSubtitle:"دقت و سرعت در انتقال اموال تجارتی شما",
+        heroText:"انتقال اموال تجارتی شما به تمام نقاط کشور به طور صحیح و در اسرع وقت",
+        aboutTitle:"درباره شرکت نوروزی", servicesTitle:"خدمات ما", fleetTitle:"ناوگان ترانسپورتی ما",
+        requestTitle:"درخواست اطلاعات و خدمات", contactTitle:"تماس و آدرس شرکت",
+        service1Title:"حمل و نقل داخلی", service2Title:"ترانسپورت بین المللی",
+        service3Title:"انتقال کالا", service4Title:"خدمات حمل بار",
+        service5Title:"حمل بار حساس", service6Title:"ترخیص کالا",
+        stat1:"سال تجربه", stat2:"محموله انتقال داده شده", stat3:"مسیر حمل و نقل", stat4:"پشتیبانی",
+        nameLabel:"نام و نام خانوادگی", phoneLabel:"شماره تماس", serviceLabel:"نوع درخواست",
+        destinationLabel:"مقصد / مسیر", descriptionLabel:"توضیحات درخواست",
+        submitRequest:"💬 ارسال درخواست از طریق واتساپ"
+    },
+    en: {
+        settingsTitle:"Website Settings", themeTitle:"Appearance", themeDesc:"Light / Dark",
+        languageTitle:"Website Language", languageDesc:"Choose language",
+        navHome:"Home", navAbout:"About Us", navServices:"Services", navFleet:"Our Fleet",
+        navRequest:"Request", navContact:"Contact Us",
+        heroTitle:"Nawroozi International Transport Company",
+        heroSubtitle:"Accuracy and Speed in Transporting Your Commercial Goods",
+        heroText:"Safe and fast transportation of your commercial goods to all parts of the country",
+        aboutTitle:"About Nawroozi Company", servicesTitle:"Our Services", fleetTitle:"Our Transport Fleet",
+        requestTitle:"Request Information & Services", contactTitle:"Contact & Company Address",
+        service1Title:"Domestic Transport", service2Title:"International Transport",
+        service3Title:"Cargo Transfer", service4Title:"Freight Services",
+        service5Title:"Sensitive Cargo", service6Title:"Customs Clearance",
+        stat1:"Years of Experience", stat2:"Shipments Delivered", stat3:"Transport Routes", stat4:"Support",
+        nameLabel:"Full Name", phoneLabel:"Phone Number", serviceLabel:"Request Type",
+        destinationLabel:"Destination / Route", descriptionLabel:"Request Details",
+        submitRequest:"💬 Send Request via WhatsApp"
+    },
+    ar: {
+        settingsTitle:"إعدادات الموقع", themeTitle:"مظهر الموقع", themeDesc:"فاتح / داكن",
+        languageTitle:"لغة الموقع", languageDesc:"اختر اللغة",
+        navHome:"الرئيسية", navAbout:"من نحن", navServices:"خدماتنا", navFleet:"أسطولنا",
+        navRequest:"طلب", navContact:"اتصل بنا",
+        heroTitle:"شركة نوروزي للنقل الدولي",
+        heroSubtitle:"الدقة والسرعة في نقل بضائعكم التجارية",
+        heroText:"نقل بضائعكم التجارية إلى جميع أنحاء البلاد بشكل آمن وسريع",
+        aboutTitle:"عن شركة نوروزي", servicesTitle:"خدماتنا", fleetTitle:"أسطول النقل لدينا",
+        requestTitle:"طلب المعلومات والخدمات", contactTitle:"الاتصال وعنوان الشركة",
+        service1Title:"النقل الداخلي", service2Title:"النقل الدولي",
+        service3Title:"نقل البضائع", service4Title:"خدمات الشحن",
+        service5Title:"نقل البضائع الحساسة", service6Title:"تخليص البضائع",
+        stat1:"سنوات الخبرة", stat2:"الشحنات المنقولة", stat3:"طرق النقل", stat4:"الدعم",
+        nameLabel:"الاسم الكامل", phoneLabel:"رقم الهاتف", serviceLabel:"نوع الطلب",
+        destinationLabel:"الوجهة / المسار", descriptionLabel:"تفاصيل الطلب",
+        submitRequest:"💬 إرسال الطلب عبر واتساب"
+    }
+};
+
+function applyLanguage(lang){
+    const dict = translations[lang] || translations.fa;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
+
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        if(dict[key]) el.textContent = dict[key];
+    });
+
+    const placeholders = {
+        fa:["نام خود را وارد کنید","مثلاً 0700000000","مثلاً هرات - اسلام قلعه","لطفاً درخواست یا توضیحات خود را کامل بنویسید..."],
+        en:["Enter your name","e.g. 0700000000","e.g. Herat - Islam Qala","Please enter your request or details..."],
+        ar:["أدخل اسمك","مثال: 0700000000","مثال: هرات - إسلام قلعة","يرجى كتابة طلبك أو تفاصيلك بالكامل..."]
+    };
+    const p = placeholders[lang] || placeholders.fa;
+    document.getElementById("name").placeholder = p[0];
+    document.getElementById("phone").placeholder = p[1];
+    document.getElementById("destination").placeholder = p[2];
+    document.getElementById("description").placeholder = p[3];
+
+    localStorage.setItem("siteLanguage", lang);
+}
+
+function applyTheme(dark){
+    document.body.classList.toggle("dark-mode", dark);
+    document.querySelector(".toggle-icon").textContent = dark ? "☀" : "☾";
+    localStorage.setItem("siteTheme", dark ? "dark" : "light");
+}
+
+const settingsBtn = document.getElementById("settingsBtn");
+const settingsPanel = document.getElementById("settingsPanel");
+const themeToggle = document.getElementById("themeToggle");
+const languageSelect = document.getElementById("languageSelect");
+
+settingsBtn.addEventListener("click", (e)=>{
+    e.stopPropagation();
+    const open = settingsPanel.classList.toggle("open");
+    settingsBtn.setAttribute("aria-expanded", open ? "true" : "false");
+});
+
+settingsPanel.addEventListener("click", e=>e.stopPropagation());
+
+document.addEventListener("click", ()=>{
+    settingsPanel.classList.remove("open");
+    settingsBtn.setAttribute("aria-expanded","false");
+});
+
+themeToggle.addEventListener("click", ()=>{
+    applyTheme(!document.body.classList.contains("dark-mode"));
+});
+
+languageSelect.addEventListener("change", ()=>{
+    applyLanguage(languageSelect.value);
+});
+
+const savedTheme = localStorage.getItem("siteTheme");
+applyTheme(savedTheme === "dark");
+
+const savedLanguage = localStorage.getItem("siteLanguage") || "fa";
+languageSelect.value = savedLanguage;
+applyLanguage(savedLanguage);
 </script>
 
 </body>
