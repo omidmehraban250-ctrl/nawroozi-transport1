@@ -113,4 +113,2382 @@ body{
     transition:.25s;
 }
 
-.
+.setting-button-option:hover{
+    border-color:#f5b72f;
+    background:#fff8df;
+}
+
+.language-select{
+    width:100%;
+    padding:11px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+    font-family:"Segoe UI Emoji","Noto Color Emoji",Tahoma,Arial,sans-serif;
+    background:#f5f7fa;
+    cursor:pointer;
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark-mode{
+    background:#101722;
+    color:#eee;
+}
+
+body.dark-mode .settings-menu{
+    background:#182231;
+    color:white;
+}
+
+body.dark-mode .settings-title,
+body.dark-mode .setting-label{
+    color:white;
+}
+
+body.dark-mode .setting-button-option,
+body.dark-mode .language-select{
+    background:#101722;
+    color:white;
+    border-color:#344052;
+}
+
+body.dark-mode .about,
+body.dark-mode .request,
+body.dark-mode .service,
+body.dark-mode .truck-card,
+body.dark-mode .contact-box,
+body.dark-mode .map-box{
+    background:#182231;
+    color:#eee;
+}
+
+body.dark-mode .gallery,
+body.dark-mode .contact{
+    background:#121b28;
+}
+
+body.dark-mode .section-title h2,
+body.dark-mode .service h3,
+body.dark-mode .truck-info h3,
+body.dark-mode .contact-box h3,
+body.dark-mode .map-box h3{
+    color:#f5b72f;
+}
+
+body.dark-mode .request-container{
+    background:#121b28;
+}
+
+body.dark-mode .request-intro{
+    color:#bbb;
+}
+
+body.dark-mode .form-group label{
+    color:#f5b72f;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea{
+    background:#101722;
+    color:white;
+    border-color:#344052;
+}
+
+body.dark-mode .phone-item{
+    background:#101722;
+}
+
+body.dark-mode .phone-number{
+    color:#f5b72f;
+}
+
+body.dark-mode .address-text{
+    color:#ddd;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#071b35;
+    color:white;
+    padding:18px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.25);
+
+    /* فضای دکمه تنظیمات */
+    padding-right:70px;
+}
+
+.logo{
+    font-family:"B Titr",Tahoma,sans-serif;
+    font-size:26px;
+    font-weight:bold;
+    color:#f5b72f;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+nav a{
+    position:relative;
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    padding:5px 2px 8px;
+    font-family:"B Titr",Tahoma,sans-serif;
+    transition:color .3s;
+}
+
+/* خط زیر گزینه منو */
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    margin:auto;
+    background:#f5b72f;
+    border-radius:5px;
+    transition:width .3s ease;
+}
+
+nav a:hover{
+    color:#f5b72f;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ================= SECTIONS SCROLL ================= */
+
+section{
+    padding:80px 7%;
+    scroll-margin-top:90px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+
+    background:
+    linear-gradient(
+        rgba(4,18,38,.72),
+        rgba(4,18,38,.84)
+    ),
+    url("https://dispatch42.school/images/articles/1748615690428/articleImageMobile.jpeg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:1000px;
+    color:white;
+}
+
+.hero h1{
+    font-family:"B Titr",Tahoma,sans-serif;
+    font-size:50px;
+    color:#f5b72f;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-family:"Noto Nastaliq Urdu",serif;
+    font-size:34px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-family:"Noto Nastaliq Urdu",serif;
+    font-size:25px;
+    margin-bottom:35px;
+}
+
+/* ================= BUTTONS ================= */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    font-family:"B Titr",Tahoma,sans-serif;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#f5b72f;
+    color:#071b35;
+}
+
+.btn-primary:hover{
+    background:#ffd568;
+    transform:translateY(-3px);
+}
+
+.btn-whatsapp{
+    background:#20c76a;
+    color:white;
+}
+
+.btn-whatsapp:hover{
+    background:#16a958;
+    transform:translateY(-3px);
+}
+
+.btn-telegram{
+    background:#229ED9;
+    color:white;
+}
+
+.btn-telegram:hover{
+    background:#168ac0;
+    transform:translateY(-3px);
+}
+
+.btn-instagram{
+    background:#d62976;
+    color:white;
+}
+
+.btn-instagram:hover{
+    background:#b81f62;
+    transform:translateY(-3px);
+}
+
+/* ================= GENERAL ================= */
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#071b35;
+    font-family:"B Titr",Tahoma,sans-serif;
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.section-title span{
+    display:block;
+    width:80px;
+    height:4px;
+    background:#f5b72f;
+    margin:auto;
+    border-radius:10px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:white;
+}
+
+.about-content{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+    font-family:"Noto Nastaliq Urdu",serif;
+    font-size:23px;
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service{
+    background:white;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:14px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,0,0,.14);
+}
+
+.service-icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.service h3{
+    color:#071b35;
+    font-family:"B Titr",Tahoma,sans-serif;
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.service p{
+    font-family:"Noto Nastaliq Urdu",serif;
+    font-size:19px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    background:#eef2f6;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.truck-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.truck-card:hover{
+    transform:translateY(-8px);
+}
+
+.truck-card img{
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    display:block;
+}
+
+.truck-info{
+    padding:20px;
+    text-align:center;
+}
+
+.truck-info h3{
+    font-family:"B Titr",Tahoma,sans-serif;
+    color:#071b35;
+    font-size:22px;
+}
+
+.truck-info p{
+    font-family:"Noto Nastaliq Urdu",serif;
+    font-size:18px;
+}
+
+/* ================= REQUEST ================= */
+
+.request{
+    background:white;
+}
+
+.request-container{
+    max-width:950px;
+    margin:auto;
+    background:#f5f7fa;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.request-intro{
+    text-align:center;
+    font-family:"Noto Nastaliq Urdu",serif;
+    font-size:20px;
+    margin-bottom:30px;
+    color:#555;
+}
+
+.request-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group.full{
+    grid-column:1 / -1;
+}
+
+.form-group label{
+    font-family:"B Titr",Tahoma,sans-serif;
+    color:#071b35;
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:13px 15px;
+    border:1px solid #d8dde5;
+    border-radius:9px;
+    background:white;
+    font-family:Tahoma,Arial,sans-serif;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#f5b72f;
+    box-shadow:0 0 0 3px rgba(245,183,47,.15);
+}
+
+.form-group textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+.submit-request{
+    grid-column:1 / -1;
+    border:0;
+    background:#20c76a;
+    color:white;
+    padding:15px;
+    border-radius:9px;
+    font-family:"B Titr",Tahoma,sans-serif;
+    font-size:19px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit-request:hover{
+    background:#16a958;
+    transform:translateY(-2px);
+}
+
+/* ================= NUMBERS ================= */
+
+.numbers{
+    background:#071b35;
+    color:white;
+}
+
+.numbers-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.number h3{
+    color:#f5b72f;
+    font-family:Arial,sans-serif;
+    font-size:42px;
+}
+
+.number p{
+    font-family:"Noto Nastaliq Urdu",serif;
+    font-size:19px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#eef2f6;
+}
+
+.contact-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.contact-box h3{
+    color:#071b35;
+    font-family:"B Titr",Tahoma,sans-serif;
+    font-size:25px;
+    margin-bottom:20px;
+    border-bottom:2px solid #f5b72f;
+    padding-bottom:10px;
+}
+
+.phone-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.phone-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    background:#f5f7fa;
+    padding:12px 15px;
+    border-radius:9px;
+}
+
+.phone-number{
+    color:#071b35;
+    text-decoration:none;
+    font-family:Arial,sans-serif;
+    font-size:19px;
+    direction:ltr;
+}
+
+.phone-number:hover{
+    color:#d49b14;
+}
+
+.phone-label{
+    font-family:"Noto Nastaliq Urdu",serif;
+    color:#555;
+}
+
+.address-text{
+    font-family:"Noto Nastaliq Urdu",serif;
+    font-size:20px;
+    line-height:2.2;
+}
+
+.address-line{
+    margin-bottom:10px;
+}
+
+.map-box{
+    grid-column:1 / -1;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.map-box h3{
+    color:#071b35;
+    font-family:"B Titr",Tahoma,sans-serif;
+    font-size:25px;
+    margin-bottom:18px;
+}
+
+.map-preview{
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+
+.map-preview iframe{
+    width:100%;
+    height:330px;
+    border:0;
+    display:block;
+}
+
+.map-actions{
+    display:flex;
+    justify-content:center;
+    margin-top:18px;
+}
+
+.map-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:12px 25px;
+    background:#0b6efd;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.map-link:hover{
+    background:#0956d1;
+    transform:translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#041225;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer strong{
+    color:#f5b72f;
+    font-family:"B Titr",Tahoma,sans-serif;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+        font-size:14px;
+    }
+
+    .hero{
+        min-height:580px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:20px;
+    }
+
+    .services-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .numbers-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .request-form{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full,
+    .submit-request{
+        grid-column:auto;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .map-box{
+        grid-column:auto;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .request-container{
+        padding:25px 18px;
+    }
+
+    .phone-item{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .settings-wrapper{
+        top:12px;
+        right:12px;
+    }
+
+    .settings-button{
+        width:38px;
+        height:38px;
+        font-size:21px;
+        border-radius:9px;
+    }
+
+    .settings-menu{
+        width:245px;
+        top:48px;
+    }
+
+    header{
+        padding-right:62px;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .numbers-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .number h3{
+        font-size:32px;
+    }
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .map-preview iframe{
+        height:280px;
+    }
+
+    nav a{
+        padding-bottom:7px;
+    }
+
+}
+
+/* ================= LTR SUPPORT ================= */
+
+html[dir="ltr"] .settings-menu{
+    right:0;
+    left:auto;
+}
+
+html[dir="ltr"] .setting-button-option{
+    text-align:left;
+}
+
+html[dir="ltr"] nav{
+    direction:ltr;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= SETTINGS ================= -->
+
+<div class="settings-wrapper">
+
+<button
+    type="button"
+    class="settings-button"
+    onclick="toggleSettings()"
+    aria-label="Settings"
+    aria-expanded="false"
+>
+    ☰
+</button>
+
+<div class="settings-menu" id="settingsMenu">
+
+    <div class="settings-title" data-i18n="settings">
+        تنظیمات سایت
+    </div>
+
+    <div class="setting-item">
+
+        <span
+            class="setting-label"
+            data-i18n="theme"
+        >
+            حالت نمایش
+        </span>
+
+        <button
+            type="button"
+            class="setting-button-option"
+            onclick="toggleDarkMode()"
+            id="themeButton"
+        >
+            🌙 حالت شب
+        </button>
+
+    </div>
+
+    <div class="setting-item">
+
+        <span
+            class="setting-label"
+            data-i18n="language"
+        >
+            زبان سایت
+        </span>
+
+        <select
+            class="language-select"
+            id="languageSelect"
+            onchange="changeLanguage(this.value)"
+        >
+
+            <option value="fa">🇦🇫 فارسی</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="ar">🇸🇦 العربية</option>
+            <option value="ru">🇷🇺 Русский</option>
+            <option value="tr">🇹🇷 Türkçe</option>
+            <option value="zh">🇨🇳 中文</option>
+
+        </select>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo" data-i18n="logo">
+    نوروزی ترانسپورت
+</div>
+
+<nav>
+
+<a href="#home" data-i18n="home">خانه</a>
+<a href="#about" data-i18n="aboutNav">درباره ما</a>
+<a href="#services" data-i18n="servicesNav">خدمات</a>
+<a href="#gallery" data-i18n="fleetNav">ناوگان ما</a>
+<a href="#request" data-i18n="requestNav">درخواست</a>
+<a href="#contact" data-i18n="contactNav">تماس با ما</a>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1 data-i18n="heroTitle">
+    شرکت ترانسپورتی باربری بین المللی نوروزی
+</h1>
+
+<h2 data-i18n="heroSubtitle">
+    دقت و سرعت در انتقال اموال تجارتی شما
+</h2>
+
+<p data-i18n="heroText">
+    انتقال اموال تجارتی شما به تمام نقاط کشور
+    به طور صحیح و در اسرع وقت
+</p>
+
+<div class="buttons">
+
+    <a class="btn btn-primary"
+       href="#services"
+       data-i18n="viewServices">
+        مشاهده خدمات
+    </a>
+
+    <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/93779615141"
+        target="_blank"
+        rel="noopener"
+        data-i18n="whatsapp"
+    >
+        💬 تماس در واتساپ
+    </a>
+
+    <a
+        class="btn btn-telegram"
+        href="https://t.me/+93704861149"
+        target="_blank"
+        rel="noopener"
+        data-i18n="telegram"
+    >
+        📱 ورود به تلگرام
+    </a>
+
+    <a
+        class="btn btn-instagram"
+        href="https://www.instagram.com/nawroozi_international1/"
+        target="_blank"
+        rel="noopener"
+        data-i18n="instagram"
+    >
+        📸 ورود به اینستاگرام
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+<div class="section-title">
+
+<h2 data-i18n="aboutTitle">
+    درباره شرکت نوروزی
+</h2>
+
+<span></span>
+
+</div>
+
+<div class="about-content">
+
+<p data-i18n="aboutText1">
+    شرکت ترانسپورتی بین المللی نوروزی با ارائه خدمات
+    حمل و نقل داخلی و خارجی، آماده انتقال اموال تجارتی
+    شما به تمام نقاط کشور و مسیرهای بین المللی می‌باشد.
+</p>
+
+<br>
+
+<p data-i18n="aboutText2">
+    دقت، سرعت و امنیت در انتقال کالا، اساس فعالیت ماست.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<div class="section-title">
+
+<h2 data-i18n="servicesTitle">
+    خدمات ما
+</h2>
+
+<span></span>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service">
+    <div class="service-icon">🚛</div>
+    <h3 data-i18n="service1Title">حمل و نقل داخلی</h3>
+    <p data-i18n="service1Text">
+        انتقال اموال تجارتی به تمام نقاط افغانستان
+        با سرعت و امنیت بالا.
+    </p>
+</div>
+
+<div class="service">
+    <div class="service-icon">🌍</div>
+    <h3 data-i18n="service2Title">ترانسپورت بین المللی</h3>
+    <p data-i18n="service2Text">
+        ارائه خدمات حمل و نقل بین المللی برای
+        انتقال کالاهای تجارتی.
+    </p>
+</div>
+
+<div class="service">
+    <div class="service-icon">📦</div>
+    <h3 data-i18n="service3Title">انتقال کالا</h3>
+    <p data-i18n="service3Text">
+        انتقال صحیح و سریع انواع کالاهای تجارتی
+        به مقصد مورد نظر.
+    </p>
+</div>
+
+<div class="service">
+    <div class="service-icon">🚢</div>
+    <h3 data-i18n="service4Title">خدمات حمل بار</h3>
+    <p data-i18n="service4Text">
+        هماهنگی و انتقال بار با وسایل نقلیه مناسب
+        برای انواع محموله‌ها.
+    </p>
+</div>
+
+<div class="service">
+    <div class="service-icon">❄️</div>
+    <h3 data-i18n="service5Title">حمل بار حساس</h3>
+    <p data-i18n="service5Text">
+        انتقال کالاهایی که نیازمند مراقبت و
+        شرایط ویژه هستند.
+    </p>
+</div>
+
+<div class="service">
+    <div class="service-icon">📋</div>
+    <h3 data-i18n="service6Title">ترخیص کالا</h3>
+    <p data-i18n="service6Text">
+        خدمات مربوط به ترخیص و هماهنگی امور
+        حمل و نقل کالا.
+    </p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="section-title">
+
+<h2 data-i18n="fleetTitle">
+    ناوگان ترانسپورتی ما
+</h2>
+
+<span></span>
+
+</div>
+
+<div class="gallery-grid">
+
+<div class="truck-card">
+
+    <img
+        src="https://spotinc.com/wp-content/uploads/2025/03/shutterstock_2513257961-1-1536x1024.jpg"
+        alt="Truck"
+    >
+
+    <div class="truck-info">
+
+        <h3 data-i18n="fleet1Title">
+            خدمات ترخیص کالای تجارتی شما
+        </h3>
+
+        <p data-i18n="fleet1Text">
+            به طور 24 ساعته
+        </p>
+
+    </div>
+
+</div>
+
+<div class="truck-card">
+
+    <img
+        src="https://cdn.prod.website-files.com/6633e3d3afa212fa48c40b96/6633e3d3afa212fa48c40bda_AdobeStock_579713116-p-2600.jpg"
+        alt="Truck"
+    >
+
+    <div class="truck-info">
+
+        <h3 data-i18n="fleet2Title">
+            حمل بار بین شهری
+        </h3>
+
+        <p data-i18n="fleet2Text">
+            انتقال سریع و مطمئن محموله‌ها
+        </p>
+
+    </div>
+
+</div>
+
+<div class="truck-card">
+
+    <img
+        src="https://fatiguescience.com/hubfs/road%20transportation%20operations.jpeg"
+        alt="Truck"
+    >
+
+    <div class="truck-info">
+
+        <h3 data-i18n="fleet3Title">
+            انتقال اموال تجارتی شما به تمام نقاط کشور،
+            ایران، پاکستان، چین و غیره
+        </h3>
+
+        <p data-i18n="fleet3Text">
+            خدمات سرتاسری داخلی و خارجی و ترخیص کالا
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= REQUEST ================= -->
+
+<section class="request" id="request">
+
+<div class="section-title">
+
+<h2 data-i18n="requestTitle">
+    درخواست اطلاعات و خدمات
+</h2>
+
+<span></span>
+
+</div>
+
+<div class="request-container">
+
+<p class="request-intro" data-i18n="requestIntro">
+    اگر به اطلاعات بیشتر، قیمت، هماهنگی حمل بار
+    یا خدمات ترانسپورتی نیاز دارید، مشخصات خود را
+    وارد کنید تا درخواست شما از طریق واتساپ برای
+    شرکت ارسال شود.
+</p>
+
+<form
+    class="request-form"
+    onsubmit="sendToWhatsApp(event)"
+>
+
+    <div class="form-group">
+
+        <label for="name" data-i18n="nameLabel">
+            نام و نام خانوادگی
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            data-placeholder="namePlaceholder"
+            placeholder="نام خود را وارد کنید"
+            required
+        >
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="phone" data-i18n="phoneLabel">
+            شماره تماس
+        </label>
+
+        <input
+            type="tel"
+            id="phone"
+            data-placeholder="phonePlaceholder"
+            placeholder="مثلاً 0700000000"
+            required
+        >
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="service" data-i18n="serviceLabel">
+            نوع درخواست
+        </label>
+
+        <select id="service" required>
+
+            <option value="" data-i18n="choose">
+                انتخاب کنید
+            </option>
+
+            <option value="internal" data-i18n="service1Title">
+                حمل و نقل داخلی
+            </option>
+
+            <option value="international" data-i18n="service2Title">
+                ترانسپورت بین المللی
+            </option>
+
+            <option value="cargo" data-i18n="service3Title">
+                انتقال کالا
+            </option>
+
+            <option value="customs" data-i18n="service6Title">
+                ترخیص کالا
+            </option>
+
+            <option value="price" data-i18n="priceRequest">
+                استعلام قیمت
+            </option>
+
+            <option value="information" data-i18n="moreInformation">
+                درخواست اطلاعات بیشتر
+            </option>
+
+            <option value="other" data-i18n="other">
+                سایر
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="destination" data-i18n="destinationLabel">
+            مقصد / مسیر
+        </label>
+
+        <input
+            type="text"
+            id="destination"
+            data-placeholder="destinationPlaceholder"
+            placeholder="مثلاً هرات - اسلام قلعه"
+        >
+
+    </div>
+
+    <div class="form-group full">
+
+        <label for="description" data-i18n="descriptionLabel">
+            توضیحات درخواست
+        </label>
+
+        <textarea
+            id="description"
+            data-placeholder="descriptionPlaceholder"
+            placeholder="لطفاً درخواست یا توضیحات خود را کامل بنویسید..."
+            required
+        ></textarea>
+
+    </div>
+
+    <button
+        type="submit"
+        class="submit-request"
+        data-i18n="submitRequest"
+    >
+        💬 ارسال درخواست از طریق واتساپ
+    </button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ================= NUMBERS ================= -->
+
+<section class="numbers">
+
+<div class="numbers-grid">
+
+<div class="number">
+    <h3>30+</h3>
+    <p data-i18n="years">سال تجربه</p>
+</div>
+
+<div class="number">
+    <h3>1000000+</h3>
+    <p data-i18n="shipments">محموله انتقال داده شده</p>
+</div>
+
+<div class="number">
+    <h3>34+</h3>
+    <p data-i18n="routes">مسیر حمل و نقل</p>
+</div>
+
+<div class="number">
+    <h3>24/7</h3>
+    <p data-i18n="support">پشتیبانی</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="section-title">
+
+<h2 data-i18n="contactTitle">
+    تماس و آدرس شرکت
+</h2>
+
+<span></span>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-box">
+
+    <h3 data-i18n="phoneTitle">
+        📞 شماره‌های تماس
+    </h3>
+
+    <div class="phone-list">
+
+        <div class="phone-item">
+            <span class="phone-label">غلام قادر نوری</span>
+            <a class="phone-number" href="tel:0795190285">
+                0795190285
+            </a>
+        </div>
+
+        <div class="phone-item">
+            <span class="phone-label">احمد تواب نوروزی</span>
+            <a class="phone-number" href="tel:0779615141">
+                0779615141
+            </a>
+        </div>
+
+        <div class="phone-item">
+            <span class="phone-label">احمد تواب نوروزی</span>
+            <a class="phone-number" href="tel:0704861149">
+                0704861149
+            </a>
+        </div>
+
+        <div class="phone-item">
+
+            <span class="phone-label" data-i18n="ownerNumber">
+                شماره تماس آقاصاحب
+            </span>
+
+            <a class="phone-number" href="tel:0794241052">
+                0794241052
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="contact-box">
+
+    <h3 data-i18n="addressTitle">
+        📍 آدرس شرکت
+    </h3>
+
+    <div class="address-text">
+
+        <p class="address-line">
+            <strong data-i18n="city">شهر:</strong>
+            <span data-i18n="herat">هرات</span>
+        </p>
+
+        <p class="address-line">
+            <strong data-i18n="location">موقعیت:</strong>
+            <span data-i18n="islamQalaRoad">
+                سرک عمومی اسلام‌قلعه
+            </span>
+        </p>
+
+        <p class="address-line">
+            <strong data-i18n="address">نشانی:</strong>
+            <span data-i18n="addressValue">
+                مقابل ترمینال باربری، کوچه سید مختار، دکان نمبر ۶
+            </span>
+        </p>
+
+        <p class="address-line">
+            <strong data-i18n="commission">شعبه کمیسیون:</strong>
+            <span data-i18n="shop18">
+                دکان نمبر ۱۸
+            </span>
+        </p>
+
+    </div>
+
+</div>
+
+<div class="map-box">
+
+    <h3 data-i18n="mapTitle">
+        🗺️ موقعیت شرکت روی نقشه
+    </h3>
+
+    <div class="map-preview">
+
+        <iframe
+            src="https://www.google.com/maps?q=Herat%20Islam%20Qala&output=embed"
+            loading="lazy"
+            allowfullscreen
+        ></iframe>
+
+    </div>
+
+    <div class="map-actions">
+
+        <a
+            class="map-link"
+            href="https://maps.app.goo.gl/XY5fRtrkTeNLmcCS7"
+            target="_blank"
+            rel="noopener"
+            data-i18n="openMap"
+        >
+            📍 باز کردن موقعیت دقیق در Google Maps
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026
+
+<strong data-i18n="companyName">
+    شرکت ترانسپورتی بین المللی نوروزی
+</strong>
+
+<span data-i18n="rights">
+    - تمامی حقوق این سایت محفوظ است.
+</span>
+
+</p>
+
+</footer>
+
+<script>
+
+/* =====================================================
+   TRANSLATIONS
+===================================================== */
+
+const translations = {
+
+fa:{
+    settings:"تنظیمات سایت",
+    theme:"حالت نمایش",
+    language:"زبان سایت",
+    lightMode:"☀️ حالت روشن",
+    darkMode:"🌙 حالت شب",
+    logo:"نوروزی ترانسپورت",
+    home:"خانه",
+    aboutNav:"درباره ما",
+    servicesNav:"خدمات",
+    fleetNav:"ناوگان ما",
+    requestNav:"درخواست",
+    contactNav:"تماس با ما",
+
+    heroTitle:"شرکت ترانسپورتی باربری بین المللی نوروزی",
+    heroSubtitle:"دقت و سرعت در انتقال اموال تجارتی شما",
+    heroText:"انتقال اموال تجارتی شما به تمام نقاط کشور به طور صحیح و در اسرع وقت",
+    viewServices:"مشاهده خدمات",
+    whatsapp:"💬 تماس در واتساپ",
+    telegram:"📱 ورود به تلگرام",
+    instagram:"📸 ورود به اینستاگرام",
+
+    aboutTitle:"درباره شرکت نوروزی",
+    aboutText1:"شرکت ترانسپورتی بین المللی نوروزی با ارائه خدمات حمل و نقل داخلی و خارجی، آماده انتقال اموال تجارتی شما به تمام نقاط کشور و مسیرهای بین المللی می‌باشد.",
+    aboutText2:"دقت، سرعت و امنیت در انتقال کالا، اساس فعالیت ماست.",
+
+    servicesTitle:"خدمات ما",
+    service1Title:"حمل و نقل داخلی",
+    service1Text:"انتقال اموال تجارتی به تمام نقاط افغانستان با سرعت و امنیت بالا.",
+    service2Title:"ترانسپورت بین المللی",
+    service2Text:"ارائه خدمات حمل و نقل بین المللی برای انتقال کالاهای تجارتی.",
+    service3Title:"انتقال کالا",
+    service3Text:"انتقال صحیح و سریع انواع کالاهای تجارتی به مقصد مورد نظر.",
+    service4Title:"خدمات حمل بار",
+    service4Text:"هماهنگی و انتقال بار با وسایل نقلیه مناسب برای انواع محموله‌ها.",
+    service5Title:"حمل بار حساس",
+    service5Text:"انتقال کالاهایی که نیازمند مراقبت و شرایط ویژه هستند.",
+    service6Title:"ترخیص کالا",
+    service6Text:"خدمات مربوط به ترخیص و هماهنگی امور حمل و نقل کالا.",
+
+    fleetTitle:"ناوگان ترانسپورتی ما",
+    fleet1Title:"خدمات ترخیص کالای تجارتی شما",
+    fleet1Text:"به طور 24 ساعته",
+    fleet2Title:"حمل بار بین شهری",
+    fleet2Text:"انتقال سریع و مطمئن محموله‌ها",
+    fleet3Title:"انتقال اموال تجارتی شما به تمام نقاط کشور، ایران، پاکستان، چین و غیره",
+    fleet3Text:"خدمات سرتاسری داخلی و خارجی و ترخیص کالا",
+
+    years:"سال تجربه",
+    shipments:"محموله انتقال داده شده",
+    routes:"مسیر حمل و نقل",
+    support:"پشتیبانی",
+
+    requestTitle:"درخواست اطلاعات و خدمات",
+    requestIntro:"اگر به اطلاعات بیشتر، قیمت، هماهنگی حمل بار یا خدمات ترانسپورتی نیاز دارید، مشخصات خود را وارد کنید تا درخواست شما از طریق واتساپ برای شرکت ارسال شود.",
+    nameLabel:"نام و نام خانوادگی",
+    namePlaceholder:"نام خود را وارد کنید",
+    phoneLabel:"شماره تماس",
+    phonePlaceholder:"مثلاً 0700000000",
+    serviceLabel:"نوع درخواست",
+    choose:"انتخاب کنید",
+    destinationLabel:"مقصد / مسیر",
+    destinationPlaceholder:"مثلاً هرات - اسلام قلعه",
+    descriptionLabel:"توضیحات درخواست",
+    descriptionPlaceholder:"لطفاً درخواست یا توضیحات خود را کامل بنویسید...",
+    submitRequest:"💬 ارسال درخواست از طریق واتساپ",
+    priceRequest:"استعلام قیمت",
+    moreInformation:"درخواست اطلاعات بیشتر",
+    other:"سایر",
+
+    contactTitle:"تماس و آدرس شرکت",
+    phoneTitle:"📞 شماره‌های تماس",
+    ownerNumber:"شماره تماس آقاصاحب",
+    addressTitle:"📍 آدرس شرکت",
+    city:"شهر:",
+    herat:"هرات",
+    location:"موقعیت:",
+    islamQalaRoad:"سرک عمومی اسلام‌قلعه",
+    address:"نشانی:",
+    addressValue:"مقابل ترمینال باربری، کوچه سید مختار، دکان نمبر ۶",
+    commission:"شعبه کمیسیون:",
+    shop18:"دکان نمبر ۱۸",
+    mapTitle:"🗺️ موقعیت شرکت روی نقشه",
+    openMap:"📍 باز کردن موقعیت دقیق در Google Maps",
+
+    companyName:"شرکت ترانسپورتی بین المللی نوروزی",
+    rights:"- تمامی حقوق این سایت محفوظ است.",
+
+    whatsappMessage:"سلام، از طریق وب‌سایت شرکت ترانسپورتی بین المللی نوروزی درخواست دارم."
+},
+
+en:{
+    settings:"Website Settings",
+    theme:"Display Mode",
+    language:"Website Language",
+    lightMode:"☀️ Light Mode",
+    darkMode:"🌙 Dark Mode",
+    logo:"Nawroozi Transport",
+    home:"Home",
+    aboutNav:"About Us",
+    servicesNav:"Services",
+    fleetNav:"Our Fleet",
+    requestNav:"Request",
+    contactNav:"Contact Us",
+
+    heroTitle:"Nawroozi International Transport Company",
+    heroSubtitle:"Accuracy and Speed in Transporting Your Commercial Goods",
+    heroText:"Safe and fast transportation of your commercial goods to all parts of the country.",
+    viewServices:"View Services",
+    whatsapp:"💬 WhatsApp",
+    telegram:"📱 Telegram",
+    instagram:"📸 Instagram",
+
+    aboutTitle:"About Nawroozi Company",
+    aboutText1:"Nawroozi International Transport Company provides domestic and international transportation services and is ready to transport your commercial goods throughout the country and international routes.",
+    aboutText2:"Accuracy, speed and security in cargo transportation are the foundation of our work.",
+
+    servicesTitle:"Our Services",
+    service1Title:"Domestic Transportation",
+    service1Text:"Transportation of commercial goods throughout Afghanistan with high speed and security.",
+    service2Title:"International Transport",
+    service2Text:"International transportation services for commercial goods.",
+    service3Title:"Cargo Transportation",
+    service3Text:"Safe and fast transportation of different types of commercial goods.",
+    service4Title:"Freight Services",
+    service4Text:"Coordination and transportation of cargo using suitable vehicles.",
+    service5Title:"Sensitive Cargo",
+    service5Text:"Transportation of goods requiring special care and conditions.",
+    service6Title:"Customs Clearance",
+    service6Text:"Customs clearance and transportation coordination services.",
+
+    fleetTitle:"Our Transport Fleet",
+    fleet1Title:"Commercial Cargo Customs Clearance",
+    fleet1Text:"24 hours a day",
+    fleet2Title:"Intercity Cargo Transportation",
+    fleet2Text:"Fast and reliable cargo transportation",
+    fleet3Title:"Transportation to Afghanistan, Iran, Pakistan, China and other destinations",
+    fleet3Text:"Domestic and international transportation and customs clearance",
+
+    years:"Years of Experience",
+    shipments:"Shipments Delivered",
+    routes:"Transport Routes",
+    support:"Support",
+
+    requestTitle:"Request Information and Services",
+    requestIntro:"If you need more information, pricing, cargo coordination or transportation services, enter your details and your request will be sent to the company via WhatsApp.",
+    nameLabel:"Full Name",
+    namePlaceholder:"Enter your name",
+    phoneLabel:"Phone Number",
+    phonePlaceholder:"Example: 0700000000",
+    serviceLabel:"Request Type",
+    choose:"Select",
+    destinationLabel:"Destination / Route",
+    destinationPlaceholder:"Example: Herat - Islam Qala",
+    descriptionLabel:"Request Details",
+    descriptionPlaceholder:"Please write your request or details...",
+    submitRequest:"💬 Send Request via WhatsApp",
+    priceRequest:"Price Inquiry",
+    moreInformation:"More Information",
+    other:"Other",
+
+    contactTitle:"Contact and Company Address",
+    phoneTitle:"📞 Contact Numbers",
+    ownerNumber:"Owner Contact Number",
+    addressTitle:"📍 Company Address",
+    city:"City:",
+    herat:"Herat",
+    location:"Location:",
+    islamQalaRoad:"Islam Qala General Road",
+    address:"Address:",
+    addressValue:"Opposite the Cargo Terminal, Seyyed Mokhtar Lane, Shop No. 6",
+    commission:"Commission Branch:",
+    shop18:"Shop No. 18",
+    mapTitle:"🗺️ Company Location",
+    openMap:"📍 Open Exact Location in Google Maps",
+
+    companyName:"Nawroozi International Transport Company",
+    rights:"- All rights reserved.",
+
+    whatsappMessage:"Hello, I have a request through the Nawroozi International Transport Company website."
+},
+
+ar:{
+    settings:"إعدادات الموقع",
+    theme:"وضع العرض",
+    language:"لغة الموقع",
+    lightMode:"☀️ الوضع الفاتح",
+    darkMode:"🌙 الوضع الداكن",
+    logo:"نقل نوروزي",
+    home:"الرئيسية",
+    aboutNav:"من نحن",
+    servicesNav:"الخدمات",
+    fleetNav:"أسطولنا",
+    requestNav:"طلب",
+    contactNav:"اتصل بنا",
+
+    heroTitle:"شركة نوروزي الدولية للنقل",
+    heroSubtitle:"الدقة والسرعة في نقل بضائعكم التجارية",
+    heroText:"نقل بضائعكم التجارية بأمان وسرعة إلى جميع أنحاء البلاد.",
+    viewServices:"مشاهدة الخدمات",
+    whatsapp:"💬 واتساب",
+    telegram:"📱 تيليجرام",
+    instagram:"📸 إنستغرام",
+
+    aboutTitle:"عن شركة نوروزي",
+    aboutText1:"تقدم شركة نوروزي الدولية للنقل خدمات النقل الداخلي والدولي، وهي مستعدة لنقل بضائعكم التجارية إلى جميع أنحاء البلاد والطرق الدولية.",
+    aboutText2:"الدقة والسرعة والأمان في نقل البضائع هي أساس عملنا.",
+
+    servicesTitle:"خدماتنا",
+    service1Title:"النقل الداخلي",
+    service1Text:"نقل البضائع التجارية إلى جميع أنحاء أفغانستان بسرعة وأمان.",
+    service2Title:"النقل الدولي",
+    service2Text:"تقديم خدمات النقل الدولي لنقل البضائع التجارية.",
+    service3Title:"نقل البضائع",
+    service3Text:"نقل سريع وآمن لجميع أنواع البضائع التجارية.",
+    service4Title:"خدمات الشحن",
+    service4Text:"تنسيق ونقل البضائع باستخدام المركبات المناسبة.",
+    service5Title:"البضائع الحساسة",
+    service5Text:"نقل البضائع التي تحتاج إلى رعاية وظروف خاصة.",
+    service6Title:"التخليص الجمركي",
+    service6Text:"خدمات التخليص الجمركي وتنسيق نقل البضائع.",
+
+    fleetTitle:"أسطول النقل لدينا",
+    fleet1Title:"خدمات التخليص الجمركي للبضائع التجارية",
+    fleet1Text:"على مدار 24 ساعة",
+    fleet2Title:"نقل البضائع بين المدن",
+    fleet2Text:"نقل سريع وموثوق للشحنات",
+    fleet3Title:"نقل البضائع إلى أفغانستان وإيران وباكستان والصين وغيرها",
+    fleet3Text:"خدمات النقل الداخلي والدولي والتخليص الجمركي",
+
+    years:"سنوات الخبرة",
+    shipments:"شحنة تم نقلها",
+    routes:"طرق النقل",
+    support:"الدعم",
+
+    requestTitle:"طلب المعلومات والخدمات",
+    requestIntro:"إذا كنت بحاجة إلى مزيد من المعلومات أو الأسعار أو تنسيق نقل البضائع، أدخل معلوماتك وسيتم إرسال طلبك إلى الشركة عبر واتساب.",
+    nameLabel:"الاسم الكامل",
+    namePlaceholder:"أدخل اسمك",
+    phoneLabel:"رقم الهاتف",
+    phonePlaceholder:"مثال: 0700000000",
+    serviceLabel:"نوع الطلب",
+    choose:"اختر",
+    destinationLabel:"الوجهة / الطريق",
+    destinationPlaceholder:"مثال: هرات - إسلام قلعة",
+    descriptionLabel:"تفاصيل الطلب",
+    descriptionPlaceholder:"اكتب طلبك أو تفاصيلك كاملة...",
+    submitRequest:"💬 إرسال الطلب عبر واتساب",
+    priceRequest:"استفسار عن السعر",
+    moreInformation:"طلب مزيد من المعلومات",
+    other:"أخرى",
+
+    contactTitle:"الاتصال وعنوان الشركة",
+    phoneTitle:"📞 أرقام الاتصال",
+    ownerNumber:"رقم اتصال المسؤول",
+    addressTitle:"📍 عنوان الشركة",
+    city:"المدينة:",
+    herat:"هرات",
+    location:"الموقع:",
+    islamQalaRoad:"الطريق العام إلى إسلام قلعة",
+    address:"العنوان:",
+    addressValue:"مقابل محطة الشحن، زقاق سيد مختار، المحل رقم 6",
+    commission:"فرع العمولة:",
+    shop18:"المحل رقم 18",
+    mapTitle:"🗺️ موقع الشركة على الخريطة",
+    openMap:"📍 فتح الموقع الدقيق في خرائط Google",
+
+    companyName:"شركة نوروزي الدولية للنقل",
+    rights:"- جميع الحقوق محفوظة.",
+
+    whatsappMessage:"مرحباً، لدي طلب عبر موقع شركة نوروزي الدولية للنقل."
+},
+
+ru:{
+    settings:"Настройки сайта",
+    theme:"Режим отображения",
+    language:"Язык сайта",
+    lightMode:"☀️ Светлая тема",
+    darkMode:"🌙 Тёмная тема",
+    logo:"Nawroozi Transport",
+    home:"Главная",
+    aboutNav:"О компании",
+    servicesNav:"Услуги",
+    fleetNav:"Наш автопарк",
+    requestNav:"Заявка",
+    contactNav:"Контакты",
+
+    heroTitle:"Международная транспортная компания Nawroozi",
+    heroSubtitle:"Точность и скорость перевозки ваших коммерческих грузов",
+    heroText:"Безопасная и быстрая перевозка коммерческих грузов по всей стране.",
+    viewServices:"Наши услуги",
+    whatsapp:"💬 WhatsApp",
+    telegram:"📱 Telegram",
+    instagram:"📸 Instagram",
+
+    aboutTitle:"О компании Nawroozi",
+    aboutText1:"Международная транспортная компания Nawroozi предоставляет внутренние и международные транспортные услуги и готова перевозить ваши коммерческие грузы по всей стране и международным маршрутам.",
+    aboutText2:"Точность, скорость и безопасность перевозки грузов являются основой нашей работы.",
+
+    servicesTitle:"Наши услуги",
+    service1Title:"Внутренние перевозки",
+    service1Text:"Перевозка коммерческих грузов по всему Афганистану с высокой скоростью и безопасностью.",
+    service2Title:"Международные перевозки",
+    service2Text:"Международные транспортные услуги для коммерческих грузов.",
+    service3Title:"Перевозка грузов",
+    service3Text:"Быстрая и безопасная перевозка различных коммерческих грузов.",
+    service4Title:"Грузовые услуги",
+    service4Text:"Координация и перевозка грузов подходящими транспортными средствами.",
+    service5Title:"Чувствительные грузы",
+    service5Text:"Перевозка грузов, требующих особого ухода и условий.",
+    service6Title:"Таможенное оформление",
+    service6Text:"Услуги таможенного оформления и координации перевозок.",
+
+    fleetTitle:"Наш транспортный парк",
+    fleet1Title:"Таможенное оформление коммерческих грузов",
+    fleet1Text:"24 часа в сутки",
+    fleet2Title:"Междугородние грузовые перевозки",
+    fleet2Text:"Быстрая и надёжная доставка грузов",
+    fleet3Title:"Перевозки в Афганистан, Иран, Пакистан, Китай и другие направления",
+    fleet3Text:"Внутренние и международные перевозки и таможенное оформление",
+
+    years:"Лет опыта",
+    shipments:"Перевезённых грузов",
+    routes:"Маршрутов",
+    support:"Поддержка",
+
+    requestTitle:"Запрос информации и услуг",
+    requestIntro:"Если вам нужна дополнительная информация, цена, координация перевозки или транспортные услуги, заполните данные, и ваш запрос будет отправлен компании через WhatsApp.",
+    nameLabel:"Полное имя",
+    namePlaceholder:"Введите ваше имя",
+    phoneLabel:"Номер телефона",
+    phonePlaceholder:"Например: 0700000000",
+    serviceLabel:"Тип запроса",
+    choose:"Выберите",
+    destinationLabel:"Пункт назначения / маршрут",
+    destinationPlaceholder:"Например: Герат - Ислам-Кала",
+    descriptionLabel:"Описание запроса",
+    descriptionPlaceholder:"Пожалуйста, подробно напишите ваш запрос...",
+    submitRequest:"💬 Отправить через WhatsApp",
+    priceRequest:"Запрос цены",
+    moreInformation:"Запрос дополнительной информации",
+    other:"Другое",
+
+    contactTitle:"Контакты и адрес компании",
+    phoneTitle:"📞 Контактные номера",
+    ownerNumber:"Контактный номер",
+    addressTitle:"📍 Адрес компании",
+    city:"Город:",
+    herat:"Герат",
+    location:"Местоположение:",
+    islamQalaRoad:"Главная дорога Ислам-Кала",
+    address:"Адрес:",
+    addressValue:"Напротив грузового терминала, переулок Сейед Мохтар, магазин №6",
+    commission:"Комиссионный филиал:",
+    shop18:"Магазин №18",
+    mapTitle:"🗺️ Расположение компании",
+    openMap:"📍 Открыть точное местоположение в Google Maps",
+
+    companyName:"Международная транспортная компания Nawroozi",
+    rights:"- Все права защищены.",
+
+    whatsappMessage:"Здравствуйте, у меня есть запрос через сайт международной транспортной компании Nawroozi."
+},
+
+tr:{
+    settings:"Site Ayarları",
+    theme:"Görünüm",
+    language:"Site Dili",
+    lightMode:"☀️ Açık Tema",
+    darkMode:"🌙 Koyu Tema",
+    logo:"Nawroozi Transport",
+    home:"Ana Sayfa",
+    aboutNav:"Hakkımızda",
+    servicesNav:"Hizmetler",
+    fleetNav:"Filomuz",
+    requestNav:"Talep",
+    contactNav:"İletişim",
+
+    heroTitle:"Nawroozi Uluslararası Taşımacılık Şirketi",
+    heroSubtitle:"Ticari mallarınızın taşınmasında doğruluk ve hız",
+    heroText:"Ticari mallarınızı ülkenin tüm bölgelerine güvenli ve hızlı şekilde taşıyoruz.",
+    viewServices:"Hizmetleri Gör",
+    whatsapp:"💬 WhatsApp",
+    telegram:"📱 Telegram",
+    instagram:"📸 Instagram",
+
+    aboutTitle:"Nawroozi Hakkında",
+    aboutText1:"Nawroozi Uluslararası Taşımacılık Şirketi, yurtiçi ve uluslararası taşımacılık hizmetleri sunmaktadır.",
+    aboutText2:"Doğruluk, hız ve güvenlik çalışmalarımızın temelidir.",
+
+    servicesTitle:"Hizmetlerimiz",
+    service1Title:"Yurtiçi Taşımacılık",
+    service1Text:"Afganistan'ın tüm bölgelerine hızlı ve güvenli ticari mal taşımacılığı.",
+    service2Title:"Uluslararası Taşımacılık",
+    service2Text:"Ticari mallar için uluslararası taşımacılık hizmetleri.",
+    service3Title:"Kargo Taşımacılığı",
+    service3Text:"Her türlü ticari malın hızlı ve güvenli taşınması.",
+    service4Title:"Yük Hizmetleri",
+    service4Text:"Uygun araçlarla yük taşımacılığı ve koordinasyon.",
+    service5Title:"Hassas Yükler",
+    service5Text:"Özel bakım ve koşullar gerektiren malların taşınması.",
+    service6Title:"Gümrükleme",
+    service6Text:"Gümrükleme ve taşıma koordinasyon hizmetleri.",
+
+    fleetTitle:"Taşıma Filomuz",
+    fleet1Title:"Ticari Mallar İçin Gümrükleme Hizmeti",
+    fleet1Text:"24 saat",
+    fleet2Title:"Şehirlerarası Yük Taşımacılığı",
+    fleet2Text:"Hızlı ve güvenilir yük taşımacılığı",
+    fleet3Title:"Afganistan, İran, Pakistan, Çin ve diğer bölgelere taşıma",
+    fleet3Text:"Yurtiçi ve uluslararası taşımacılık ve gümrükleme",
+
+    years:"Yıllık Deneyim",
+    shipments:"Teslim Edilen Yük",
+    routes:"Taşıma Rotası",
+    support:"Destek",
+
+    requestTitle:"Bilgi ve Hizmet Talebi",
+    requestIntro:"Daha fazla bilgi, fiyat, yük koordinasyonu veya taşımacılık hizmetine ihtiyacınız varsa bilgilerinizi girin.",
+    nameLabel:"Ad Soyad",
+    namePlaceholder:"Adınızı girin",
+    phoneLabel:"Telefon Numarası",
+    phonePlaceholder:"Örneğin: 0700000000",
+    serviceLabel:"Talep Türü",
+    choose:"Seçiniz",
+    destinationLabel:"Varış / Güzergâh",
+    destinationPlaceholder:"Örneğin: Herat - İslam Kale",
+    descriptionLabel:"Talep Açıklaması",
+    descriptionPlaceholder:"Talebinizi veya açıklamalarınızı yazın...",
+    submitRequest:"💬 WhatsApp ile Gönder",
+    priceRequest:"Fiyat Talebi",
+    moreInformation:"Daha Fazla Bilgi",
+    other:"Diğer",
+
+    contactTitle:"İletişim ve Şirket Adresi",
+    phoneTitle:"📞 İletişim Numaraları",
+    ownerNumber:"Yetkili Telefonu",
+    addressTitle:"📍 Şirket Adresi",
+    city:"Şehir:",
+    herat:"Herat",
+    location:"Konum:",
+    islamQalaRoad:"İslam Kale Genel Yolu",
+    address:"Adres:",
+    addressValue:"Kargo Terminali karşısı, Seyyid Muhtar Sokağı, Dükkan No. 6",
+    commission:"Komisyon Şubesi:",
+    shop18:"Dükkan No. 18",
+    mapTitle:"🗺️ Şirket Konumu",
+    openMap:"📍 Google Maps'te Aç",
+
+    companyName:"Nawroozi Uluslararası Taşımacılık Şirketi",
+    rights:"- Tüm hakları saklıdır.",
+
+    whatsappMessage:"Merhaba, Nawroozi Uluslararası Taşımacılık Şirketi web sitesi üzerinden bir talebim var."
+},
+
+zh:{
+    settings:"网站设置",
+    theme:"显示模式",
+    language:"网站语言",
+    lightMode:"☀️ 浅色模式",
+    darkMode:"🌙 深色模式",
+    logo:"Nawroozi 运输",
+    home:"首页",
+    aboutNav:"关于我们",
+    servicesNav:"服务",
+    fleetNav:"我们的车队",
+    requestNav:"申请",
+    contactNav:"联系我们",
+
+    heroTitle:"Nawroozi 国际运输公司",
+    heroSubtitle:"准确、快速地运输您的商业货物",
+    heroText:"安全快速地将您的商业货物运输到全国各地。",
+    viewServices:"查看服务",
+    whatsapp:"💬 WhatsApp",
+    telegram:"📱 Telegram",
+    instagram:"📸 Instagram",
+
+    aboutTitle:"关于 Nawroozi 公司",
+    aboutText1:"Nawroozi 国际运输公司提供国内和国际运输服务，可将您的商业货物运输到全国各地及国际路线。",
+    aboutText2:"准确、快速和安全是我们运输服务的基础。",
+
+    servicesTitle:"我们的服务",
+    service1Title:"国内运输",
+    service1Text:"快速、安全地将商业货物运输到阿富汗各地。",
+    service2Title:"国际运输",
+    service2Text:"为商业货物提供国际运输服务。",
+    service3Title:"货物运输",
+    service3Text:"安全、快速地运输各种商业货物。",
+    service4Title:"货运服务",
+    service4Text:"使用合适的车辆协调和运输货物。",
+    service5Title:"敏感货物",
+    service5Text:"运输需要特殊护理和条件的货物。",
+    service6Title:"清关服务",
+    service6Text:"提供清关和货物运输协调服务。",
+
+    fleetTitle:"我们的运输车队",
+    fleet1Title:"商业货物清关服务",
+    fleet1Text:"全天候 24 小时",
+    fleet2Title:"城市间货物运输",
+    fleet2Text:"快速可靠的货物运输",
+    fleet3Title:"运输至阿富汗、伊朗、巴基斯坦、中国及其他地区",
+    fleet3Text:"国内、国际运输及清关服务",
+
+    years:"年经验",
+    shipments:"已运输货物",
+    routes:"运输路线",
+    support:"客户支持",
+
+    requestTitle:"信息及服务申请",
+    requestIntro:"如果您需要更多信息、价格、货运协调或运输服务，请填写您的信息，我们将通过 WhatsApp 将申请发送给公司。",
+    nameLabel:"姓名",
+    namePlaceholder:"请输入姓名",
+    phoneLabel:"电话号码",
+    phonePlaceholder:"例如：0700000000",
+    serviceLabel:"申请类型",
+    choose:"请选择",
+    destinationLabel:"目的地 / 路线",
+    destinationPlaceholder:"例如：赫拉特 - 伊斯兰堡",
+    descriptionLabel:"申请说明",
+    descriptionPlaceholder:"请详细填写您的申请或说明...",
+    submitRequest:"💬 通过 WhatsApp 发送",
+    priceRequest:"价格咨询",
+    moreInformation:"申请更多信息",
+    other:"其他",
+
+    contactTitle:"公司联系方式和地址",
+    phoneTitle:"📞 联系电话",
+    ownerNumber:"负责人电话",
+    addressTitle:"📍 公司地址",
+    city:"城市：",
+    herat:"赫拉特",
+    location:"位置：",
+    islamQalaRoad:"伊斯兰堡公共道路",
+    address:"地址：",
+    addressValue:"货运总站对面，Seyyed Mokhtar 巷，6号店",
+    commission:"佣金分部：",
+    shop18:"18号店",
+    mapTitle:"🗺️ 公司地图位置",
+    openMap:"📍 在 Google 地图中打开",
+
+    companyName:"Nawroozi 国际运输公司",
+    rights:"- 版权所有。",
+
+    whatsappMessage:"您好，我通过 Nawroozi 国际运输公司网站提交了一个申请。"
+}
+
+};
+
+
+/* =====================================================
+   SETTINGS MENU
+===================================================== */
+
+function toggleSettings(){
+
+    const menu = document.getElementById("settingsMenu");
+    const button = document.querySelector(".settings-button");
+
+    const isActive = menu.classList.toggle("active");
+
+    button.setAttribute(
+        "aria-expanded",
+        isActive ? "true" : "false"
+    );
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+function toggleDarkMode(){
+
+    document.body.classList.toggle("dark-mode");
+
+    const dark =
+        document.body.classList.contains("dark-mode");
+
+    localStorage.setItem(
+        "nawrooziDarkMode",
+        dark ? "1" : "0"
+    );
+
+    updateThemeButton();
+}
+
+
+function updateThemeButton(){
+
+    const button =
+        document.getElementById("themeButton");
+
+    if(!button) return;
+
+    const lang =
+        localStorage.getItem("nawrooziLanguage") || "fa";
+
+    button.innerHTML =
+        document.body.classList.contains("dark-mode")
+        ? translations[lang].lightMode
+        : translations[lang].darkMode;
+}
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+function changeLanguage(lang){
+
+    if(!translations[lang]){
+        lang = "fa";
+    }
+
+    localStorage.setItem(
+        "nawrooziLanguage",
+        lang
+    );
+
+    const t = translations[lang];
+
+    document.documentElement.lang = lang;
+
+    if(lang === "fa" || lang === "ar"){
+        document.documentElement.dir = "rtl";
+    }else{
+        document.documentElement.dir = "ltr";
+    }
+
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+
+        const key =
+            element.getAttribute("data-i18n");
+
+        if(t[key]){
+            element.innerHTML = t[key];
+        }
+
+    });
+
+
+    document.querySelectorAll("[data-placeholder]").forEach(element => {
+
+        const key =
+            element.getAttribute("data-placeholder");
+
+        if(t[key]){
+            element.placeholder = t[key];
+        }
+
+    });
+
+
+    document.title = t.companyName;
+
+    updateThemeButton();
+
+    updateSelectDirection(lang);
+}
+
+
+/* =====================================================
+   SELECT DIRECTION
+===================================================== */
+
+function updateSelectDirection(lang){
+
+    const select =
+        document.getElementById("languageSelect");
+
+    if(!select) return;
+
+    if(lang === "fa" || lang === "ar"){
+        select.style.direction = "rtl";
+    }else{
+        select.style.direction = "ltr";
+    }
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+function sendToWhatsApp(event){
+
+    event.preventDefault();
+
+    const lang =
+        localStorage.getItem("nawrooziLanguage") || "fa";
+
+    const t = translations[lang];
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const serviceSelect =
+        document.getElementById("service");
+
+    const service =
+        serviceSelect.options[
+            serviceSelect.selectedIndex
+        ].text;
+
+    const destination =
+        document.getElementById("destination").value.trim();
+
+    const description =
+        document.getElementById("description").value.trim();
+
+
+    const labels = {
+
+        fa:{
+            name:"نام و نام خانوادگی",
+            phone:"شماره تماس",
+            service:"نوع درخواست",
+            destination:"مقصد / مسیر",
+            description:"توضیحات درخواست"
+        },
+
+        en:{
+            name:"Full Name",
+            phone:"Phone Number",
+            service:"Request Type",
+            destination:"Destination / Route",
+            description:"Request Details"
+        },
+
+        ar:{
+            name:"الاسم الكامل",
+            phone:"رقم الهاتف",
+            service:"نوع الطلب",
+            destination:"الوجهة / الطريق",
+            description:"تفاصيل الطلب"
+        },
+
+        ru:{
+            name:"Полное имя",
+            phone:"Номер телефона",
+            service:"Тип запроса",
+            destination:"Пункт назначения / маршрут",
+            description:"Описание запроса"
+        },
+
+        tr:{
+            name:"Ad Soyad",
+            phone:"Telefon",
+            service:"Talep Türü",
+            destination:"Varış / Güzergâh",
+            description:"Talep Açıklaması"
+        },
+
+        zh:{
+            name:"姓名",
+            phone:"电话号码",
+            service:"申请类型",
+            destination:"目的地 / 路线",
+            description:"申请说明"
+        }
+
+    };
+
+
+    const l = labels[lang];
+
+
+    const message =
+`${t.whatsappMessage}
+
+👤 ${l.name}:
+${name}
+
+📞 ${l.phone}:
+${phone}
+
+📦 ${l.service}:
+${service}
+
+📍 ${l.destination}:
+${destination || "-"}
+
+📝 ${l.description}:
+${description}`;
+
+
+    const whatsappNumber = "93704861149";
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+}
+
+
+/* =====================================================
+   LOAD SAVED SETTINGS
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        const savedLanguage =
+            localStorage.getItem(
+                "nawrooziLanguage"
+            ) || "fa";
+
+        const savedDarkMode =
+            localStorage.getItem(
+                "nawrooziDarkMode"
+            );
+
+
+        if(savedDarkMode === "1"){
+            document.body.classList.add(
+                "dark-mode"
+            );
+        }
+
+
+        const languageSelect =
+            document.getElementById(
+                "languageSelect"
+            );
+
+        if(languageSelect){
+            languageSelect.value =
+                savedLanguage;
+        }
+
+
+        changeLanguage(savedLanguage);
+
+    }
+);
+
+
+/* =====================================================
+   CLOSE SETTINGS WHEN CLICKING OUTSIDE
+===================================================== */
+
+document.addEventListener(
+    "click",
+    function(event){
+
+        const wrapper =
+            document.querySelector(
+                ".settings-wrapper"
+            );
+
+        const menu =
+            document.getElementById(
+                "settingsMenu"
+            );
+
+        const button =
+            document.querySelector(
+                ".settings-button"
+            );
+
+        if(
+            wrapper &&
+            !wrapper.contains(event.target)
+        ){
+
+            menu.classList.remove("active");
+
+            button.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
